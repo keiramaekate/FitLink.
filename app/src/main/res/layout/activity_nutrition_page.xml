@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NutritionPage">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/nutrition_page_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:itemBackground="@color/holo_blue_dark"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_nav"
+        android:layout_alignParentBottom="true"/>
+
+    <CalendarView
+        android:id="@+id/cv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_weight="1"
+        android:focusedMonthDateColor="@color/white"
+        android:gravity="center"
+        android:isScrollContainer="true"
+        android:keepScreenOn="true"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reccv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <Button
+        android:id="@+id/buttonadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignStart="@+id/cv"
+
+
+        android:layout_alignLeft="@+id/cv"
+        android:layout_alignEnd="@+id/cv"
+        android:layout_alignRight="@+id/cv"
+        android:layout_alignBottom="@+id/cv"
+        android:layout_marginStart="293dp"
+        android:layout_marginLeft="293dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="350dp"
+        android:focusable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</RelativeLayout>
+
+    <!--        android:layout_marginEnd="28dp"-->
+    <!--        android:layout_marginRight="28dp"-->
+    <!--        android:layout_marginBottom="384dp"-->

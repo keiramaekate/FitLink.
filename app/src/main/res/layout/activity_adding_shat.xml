@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddingShat">
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="614dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Delete"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="538dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/caloriesint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="enter_calories"
+        android:inputType="number"
+        android:textColor="#673AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/proteinint"
+        android:layout_width="211dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="enter_protein"
+        android:inputType="number"
+        android:textColor="#3F51B5"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesint"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/fatint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="enter_fat"
+        android:inputType="number"
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinint"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/insertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="insert"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

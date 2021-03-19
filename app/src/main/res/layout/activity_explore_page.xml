@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Explore_Page">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_blue_dark"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_nav"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/explore_page_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="142dp">
+
+        <TextView
+            android:id="@+id/explore_challenges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="265dp"
+            android:layout_marginRight="265dp"
+            android:text="Explore new challenges..."
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:ignore="HardcodedText,NotSibling" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal1"
+            android:layout_width="442dp"
+            android:layout_height="231dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/Try_Something_New"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/explore_challenges">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <ImageButton
+                    android:id="@+id/running_challenge"
+                    android:layout_width="168dp"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/runningchallenges"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/cycling_challenge"
+                    android:layout_width="168dp"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/swimming_challenge"
+                    app:layout_constraintStart_toEndOf="@id/running_challenge"
+                    app:srcCompat="@drawable/cyclingchallenges"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/swimming_challenge"
+                    android:layout_width="168dp"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintStart_toEndOf="@id/cycling_challenge"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/swimmingchallenges"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/Try_Something_New"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="265dp"
+            android:layout_marginRight="265dp"
+            android:text="@string/try_something_new"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="@+id/explore_challenges"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal1" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal2"
+            android:layout_width="441dp"
+            android:layout_height="166dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Try_Something_New">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/headspaceBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.454"
+                    app:srcCompat="@drawable/headspace2"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/runtogether"
+                    android:layout_width="139dp"
+                    android:layout_height="129dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/headspaceBtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.454"
+                    app:srcCompat="@drawable/runtogether"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:itemBackground="@color/holo_blue_dark"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_nav"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

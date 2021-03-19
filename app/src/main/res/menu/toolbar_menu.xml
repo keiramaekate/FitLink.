@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    search widget-->
+    <item
+        android:id="@+id/Search"
+        android:title="@string/search"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item
+        android:id="@+id/Settings"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/Help"
+        android:title="@string/get_help" />
+
+</menu>

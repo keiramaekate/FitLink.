@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ExplorePage"
+        android:icon="@drawable/outline_explore_white_18dp"
+        android:title="Explore"
+        />
+
+    <item
+        android:id="@+id/Progress"
+        android:icon="@drawable/outline_bar_chart_white_18dp"
+        android:title="Progress"
+        />
+
+    <item
+        android:id="@+id/Nutrition"
+        android:icon="@drawable/baseline_restaurant_white_18dp"
+        android:title="Nutrition"
+        />
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/baseline_account_circle_white_18dp"
+        android:title="Profile"
+        />
+
+</menu>
