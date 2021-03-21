@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.SearchEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -18,7 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import java.text.BreakIterator;
 
-public class Explore_Page extends AppCompatActivity {
+public class ExplorePage extends AppCompatActivity {
 
     private BreakIterator title;
 
@@ -32,20 +31,20 @@ public class Explore_Page extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
-        ImageView rightIcon = findViewById(R.id.settings);
+        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Explore_Page.this, "You selected settings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExplorePage.this, "You selected settings", Toast.LENGTH_SHORT).show();
             }
 
             //set menu to inflate
             public boolean onCreateOptionsMenu(Menu menu) {
                 MenuInflater inflater = getMenuInflater();
                 inflater.inflate(R.menu.toolbar_menu, menu);
-                return Explore_Page.super.onCreateOptionsMenu(menu);
+                return ExplorePage.super.onCreateOptionsMenu(menu);
                 //getMenuInflater().inflate(R.menu.toolbar_menu, menu);
                 // return true;
             }
@@ -69,7 +68,7 @@ public class Explore_Page extends AppCompatActivity {
                         break;
                     default:
                 }
-                return Explore_Page.super.onOptionsItemSelected(item);
+                return ExplorePage.super.onOptionsItemSelected(item);
             }
         });
 

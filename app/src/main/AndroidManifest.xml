@@ -19,7 +19,7 @@
             android:name=".NutritionPage"
             android:label="buttonadd" />
         <activity android:name=".ProgressPage" />
-        <activity android:name=".Explore_Page" />
+        <activity android:name=".ExplorePage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

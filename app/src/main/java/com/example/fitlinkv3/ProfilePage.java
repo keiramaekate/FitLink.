@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class ProfilePage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
-        ImageView rightIcon = findViewById(R.id.settings);
+        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +78,7 @@ public class ProfilePage extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.ExplorePage:
                         startActivity(new Intent(getApplicationContext()
-                                , Explore_Page.class));
+                                , ExplorePage.class));
                         overridePendingTransition(0, 0);
                         return true;
 

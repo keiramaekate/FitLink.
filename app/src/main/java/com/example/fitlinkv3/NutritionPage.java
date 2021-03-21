@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class NutritionPage extends AppCompatActivity {
     private TextView date1;
 
     private RecyclerView reccv;
-     FloatingActionButton buttonadd;
+    FloatingActionButton buttonadd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class NutritionPage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
-        ImageView rightIcon = findViewById(R.id.settings);
+        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +109,7 @@ public class NutritionPage extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.ExplorePage:
                         startActivity(new Intent(getApplicationContext()
-                                , Explore_Page.class));
+                                , ExplorePage.class));
                         overridePendingTransition(0, 0);
                         return true;
 
