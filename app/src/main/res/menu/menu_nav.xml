@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ExplorePage"
+        android:id="@+id/Explore"
         android:icon="@drawable/outline_explore_white_18dp"
         android:title="Explore"
         />

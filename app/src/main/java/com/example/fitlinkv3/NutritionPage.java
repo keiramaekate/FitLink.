@@ -43,6 +43,42 @@ public class NutritionPage extends AppCompatActivity {
         ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
+        // Assign and initialise variable
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        // set screen that is selected
+        bottomNavigationView.setSelectedItemId(R.id.Nutrition);
+
+        // code to listen to what item is selected
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.Explore:
+                        startActivity(new Intent(getApplicationContext()
+                                , ExplorePage.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.Progress:
+                        startActivity(new Intent(getApplicationContext()
+                                , ProgressPage.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.Nutrition:
+                        return true;
+
+                    case R.id.Profile:
+                        startActivity(new Intent(getApplicationContext()
+                                , ProfilePage.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
+
         rightIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,41 +131,5 @@ public class NutritionPage extends AppCompatActivity {
 //                startActivity(info);
 //            }
 //        });
-
-        // Assign and initialise variable
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-
-        // set screen that is selected
-        bottomNavigationView.setSelectedItemId(R.id.Nutrition);
-
-        // code to listen to what item is selected
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.ExplorePage:
-                        startActivity(new Intent(getApplicationContext()
-                                , ExplorePage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-
-                    case R.id.Progress:
-                        startActivity(new Intent(getApplicationContext()
-                                , ProgressPage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-
-                    case R.id.Nutrition:
-                        return true;
-
-                    case R.id.Profile:
-                        startActivity(new Intent(getApplicationContext()
-                                , ProfilePage.class));
-                        overridePendingTransition(0, 0);
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 }
