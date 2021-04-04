@@ -6,16 +6,26 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 
 public class ProfilePage extends AppCompatActivity {
 
@@ -65,6 +75,32 @@ public class ProfilePage extends AppCompatActivity {
                 }
                 return false;
             }});
+
+        Button TestButton = (Button) findViewById(R.id.button);
+
+        TestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                URL url = null;
+
+                HttpURLConnection urlConnection = null;
+                try
+                {
+                    //
+                    url = new URL("https://reqres.in/api/users?page=2");
+                    urlConnection = (HttpURLConnection) url.openConnection();
+                    //
+                    urlConnection.setRequestMethod("GET");
+                    //
+                    System.out.println(urlConnection.getResponseCode());
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
             @Override
