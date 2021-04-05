@@ -2,6 +2,7 @@ package com.example.fitlinkv3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,18 +22,63 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.fitlinkv3.retrofit.Athlete;
+import com.example.fitlinkv3.retrofit.ServiceGenerator;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
+import com.squareup.picasso.Picasso;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ProfilePage extends AppCompatActivity {
+
+    TextView stravaUsername;
+    ImageView stravaImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+        //Get athlete information
+        String accessToken = StravaAuthenticateActivity.getStravaAccessToken(this);
+        ServiceGenerator.getEndPointInterface().getAthlete("Bearer "+ accessToken).enqueue(new Callback<Athlete>()
+        {
+            @Override
+            public void onResponse(Call<Athlete> call, Response<Athlete> response)
+            {
+                if (response != null && response.isSuccessful())
+                {
+                    Athlete stravaresponse = response.body();
+                    if(stravaresponse !=null)
+                    {
+                        stravaUsername.setText(stravaresponse.getUsername());
+                        //set profile picture
+                        Picasso.get()
+                                .load(stravaresponse.getProfile())
+                                //.placeholder(R.drawable.fitlink_logo)
+                                //.error(R.drawable.bday_icon)
+                                .into(stravaImage);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Athlete> call, Throwable t)
+            {
+
+            }
+        });
+
+        stravaUsername = findViewById(R.id.tvUsername);
+        stravaImage = findViewById(R.id.ivStravaImage);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -75,32 +121,6 @@ public class ProfilePage extends AppCompatActivity {
                 }
                 return false;
             }});
-
-        Button TestButton = (Button) findViewById(R.id.button);
-
-        TestButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                URL url = null;
-
-                HttpURLConnection urlConnection = null;
-                try
-                {
-                    //
-                    url = new URL("https://reqres.in/api/users?page=2");
-                    urlConnection = (HttpURLConnection) url.openConnection();
-                    //
-                    urlConnection.setRequestMethod("GET");
-                    //
-                    System.out.println(urlConnection.getResponseCode());
-                }
-                catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        });
 
         rightIcon.setOnClickListener(new View.OnClickListener() {
             @Override
