@@ -27,13 +27,14 @@
         android:textSize="25dp"
         tools:ignore="RtlCompat" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
         <ImageButton
+            android:onClick="@id=Onclick"
             android:id="@+id/settings"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -41,6 +42,6 @@
             android:layout_centerVertical="true"
             android:background="?attr/selectableItemBackgroundBorderless"            android:src="@drawable/ic_settings"
             android:focusable="true" />
-    </RelativeLayout>
+</RelativeLayout>
 
 </androidx.appcompat.widget.Toolbar>

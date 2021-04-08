@@ -34,6 +34,7 @@ public class ExplorePage extends AppCompatActivity {
         ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
+
     // Assign and initialise variable
     BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
