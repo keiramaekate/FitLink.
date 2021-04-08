@@ -1,6 +1,6 @@
 package com.example.fitlinkv3.retrofit;
 
-public class Segments<distance> {
+public class Segments {
 
     private Integer id;
     private Integer resourceState;
@@ -17,8 +17,8 @@ public class Segments<distance> {
     private Object city;
     private Object state;
     private Object country;
-    private Integer createdAt;
-    private Integer updatedAt;
+    private String createdAt;
+    private String updatedAt;
     private Integer totalElevationGain;
     private Integer athleteSegmentStats;
 
@@ -80,13 +80,13 @@ public class Segments<distance> {
 
     public void setCountry(Object country){ this.country = country; }
 
-    public Integer getCreatedAt(){ return createdAt; }
+    public String getCreatedAt(){ return createdAt; }
 
-    public void setCreatedAt(Integer createdAt){ this.createdAt = createdAt; }
+    public void setCreatedAt(String createdAt){ this.createdAt = createdAt; }
 
-    public Integer getUpdatedAt(){ return updatedAt; }
+    public String getUpdatedAt(){ return updatedAt; }
 
-    public void setUpdatedAt(Integer updatedAt){ this.updatedAt = updatedAt; }
+    public void setUpdatedAt(String updatedAt){ this.updatedAt = updatedAt; }
 
     public Integer getTotalElevationGain(){ return totalElevationGain; }
 
