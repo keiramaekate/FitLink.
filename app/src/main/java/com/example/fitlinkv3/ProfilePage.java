@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,8 +43,11 @@ public class ProfilePage extends AppCompatActivity {
     TextView stravaUsername;
     ImageView stravaImage;
 
+    //ID for stats api call
+    public Integer stravaId;
+
     //athlete stats
-    //TextView stravaRunMiles;
+    TextView stravaRunMiles;
 
 
     @Override
@@ -51,9 +55,11 @@ public class ProfilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
-        //Get athlete information
-        //Access token is  called to make the API call
+        //Get athlete information using retrofit call
+        //Access token is called to make the API call
         String accessToken = StravaAuthenticateActivity.getStravaAccessToken(this);
+
+        //Service generator (retrofit)
         ServiceGenerator.getEndPointInterface().getAthlete("Bearer "+ accessToken).enqueue(new Callback<Athlete>()
         {
             @Override
@@ -71,6 +77,8 @@ public class ProfilePage extends AppCompatActivity {
                                 .placeholder(R.drawable.fitlink_logo)
                                 //.error(R.drawable.bday_icon)
                                 .into(stravaImage);
+
+                        stravaId = stravaresponse.getId();
                     }
                 }
             }
@@ -82,9 +90,34 @@ public class ProfilePage extends AppCompatActivity {
             }
         });
 
+
+        //retrofit api call for athletestats
+        ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
+        {
+            @Override
+            public void onResponse(Call<ActivityStats> call, Response<ActivityStats> response)
+            {
+                if (response != null && response.isSuccessful())
+                {
+                    ActivityStats stravaresponse = response.body();
+                    if(stravaresponse !=null)
+                    {
+                        stravaRunMiles.setText(stravaresponse.getAll_run_totals());
+                    }
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<ActivityStats> call, Throwable t) {
+
+            }
+
+        });
+
         stravaUsername = findViewById(R.id.tvUsername);
         stravaImage = findViewById(R.id.ivStravaImage);
-        //stravaRunMiles = findViewById(R.id.tvTotalStravaRunMiles;
+        stravaRunMiles = findViewById(R.id.tvStravaTotalRunMiles);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
