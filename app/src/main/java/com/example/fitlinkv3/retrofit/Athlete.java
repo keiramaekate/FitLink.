@@ -1,31 +1,61 @@
 package com.example.fitlinkv3.retrofit;
 
+//DetailedAthlete variables taken from Strava API
 public class Athlete {
 
+    //The unique identifier of the athlete
     private Integer id;
-    private String username;
+
+    //Resource state, indicates level of detail. Possible values: 1 -> "meta", 2 -> "summary", 3 -> "detail"
     private Integer resourceState;
+
+    //The athlete's first name.
     private String firstname;
+
+    // The athlete's last name.
     private String lastname;
-    private Object bio;
+
+    //The athlete's username.
+    private String username;
+
+    //The athlete's city.
     private Object city;
+
+    //The athlete's state or geographical region.
     private Object state;
+
+    //The athlete's country.
     private Object country;
+
+    //The athlete's sex. May take one of the following values: M, F
     private String sex;
-    private Boolean premium;
+
+    //Whether the athlete has any Summit subscription.
     private Boolean summit;
+
+    //The time at which the athlete was created.
     private String createdAt;
+
+    //The time at which the athlete was last updated.
     private String updatedAt;
-    private Integer badgeTypeId;
+
+    //The athlete's weight.
     private Float weight;
+
+    //URL to a 62x62 pixel profile picture.
     private String profileMedium;
+
+    //URL to a 124x124 pixel profile picture.
     private String profile;
+
+    //The athlete's friend count.
     private Object friend;
+
+    //The athlete's follower count.
     private Object follower;
 
-    public Integer getId() {
-        return id;
-    }
+    //functions to call specific user information
+    public Integer getId() { return id; }
 
     public void setId(Integer id) {
         this.id = id;
@@ -63,14 +93,6 @@ public class Athlete {
         this.lastname = lastname;
     }
 
-    public Object getBio() {
-        return bio;
-    }
-
-    public void setBio(Object bio) {
-        this.bio = bio;
-    }
-
     public Object getCity() {
         return city;
     }
@@ -103,14 +125,6 @@ public class Athlete {
         this.sex = sex;
     }
 
-    public Boolean getPremium() {
-        return premium;
-    }
-
-    public void setPremium(Boolean premium) {
-        this.premium = premium;
-    }
-
     public Boolean getSummit() {
         return summit;
     }
@@ -133,14 +147,6 @@ public class Athlete {
 
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    public Integer getBadgeTypeId() {
-        return badgeTypeId;
-    }
-
-    public void setBadgeTypeId(Integer badgeTypeId) {
-        this.badgeTypeId = badgeTypeId;
     }
 
     public Float getWeight() {

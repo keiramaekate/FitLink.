@@ -38,8 +38,13 @@ import retrofit2.Response;
 
 public class ProfilePage extends AppCompatActivity {
 
+    //profile info
     TextView stravaUsername;
     ImageView stravaImage;
+
+    //athlete stats
+    //TextView stravaRunMiles;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class ProfilePage extends AppCompatActivity {
         setContentView(R.layout.activity_profile_page);
 
         //Get athlete information
+        //Access token is  called to make the API call
         String accessToken = StravaAuthenticateActivity.getStravaAccessToken(this);
         ServiceGenerator.getEndPointInterface().getAthlete("Bearer "+ accessToken).enqueue(new Callback<Athlete>()
         {
@@ -62,7 +68,7 @@ public class ProfilePage extends AppCompatActivity {
                         //set profile picture
                         Picasso.get()
                                 .load(stravaresponse.getProfile())
-                                //.placeholder(R.drawable.fitlink_logo)
+                                .placeholder(R.drawable.fitlink_logo)
                                 //.error(R.drawable.bday_icon)
                                 .into(stravaImage);
                     }
@@ -78,6 +84,7 @@ public class ProfilePage extends AppCompatActivity {
 
         stravaUsername = findViewById(R.id.tvUsername);
         stravaImage = findViewById(R.id.ivStravaImage);
+        //stravaRunMiles = findViewById(R.id.tvTotalStravaRunMiles;
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

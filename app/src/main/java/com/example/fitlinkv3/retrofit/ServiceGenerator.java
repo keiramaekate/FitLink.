@@ -7,9 +7,13 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ServiceGenerator {
+
+public class ServiceGenerator
+{
+    ////retrofit set up
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
+    //Strava API call
     private static final String BASE_URL = "https://www.strava.com/api/v3/";
     private static Retrofit.Builder localPlacesBuilder = new Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create());

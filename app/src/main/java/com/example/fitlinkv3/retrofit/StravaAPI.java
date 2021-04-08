@@ -16,7 +16,9 @@ public interface StravaAPI
     //@POST("user/authenticate")
     //Call<String> login(@Body LoginData loginData);
 
+    //get athlete information
     @GET("athlete")
     Call<Athlete> getAthlete(@Header("Authorization") String value);
+
 
 }
