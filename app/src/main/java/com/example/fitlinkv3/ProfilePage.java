@@ -79,6 +79,28 @@ public class ProfilePage extends AppCompatActivity {
                                 .into(stravaImage);
 
                         stravaId = stravaresponse.getId();
+                        //retrofit api call for athletestats using above id variable
+                        ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
+                        {
+                            @Override
+                            public void onResponse(Call<ActivityStats> call, Response<ActivityStats> response)
+                            {
+                                if (response != null && response.isSuccessful())
+                                {
+                                    ActivityStats stravaresponse = response.body();
+                                    if(stravaresponse !=null)
+                                    {
+                                        stravaRunMiles.setText(stravaresponse.getAll_run_totals());
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<ActivityStats> call, Throwable t) {
+
+                            }
+
+                        });
                     }
                 }
             }
@@ -88,31 +110,6 @@ public class ProfilePage extends AppCompatActivity {
             {
 
             }
-        });
-
-
-        //retrofit api call for athletestats
-        ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
-        {
-            @Override
-            public void onResponse(Call<ActivityStats> call, Response<ActivityStats> response)
-            {
-                if (response != null && response.isSuccessful())
-                {
-                    ActivityStats stravaresponse = response.body();
-                    if(stravaresponse !=null)
-                    {
-                        stravaRunMiles.setText(stravaresponse.getAll_run_totals());
-                    }
-                }
-            }
-
-
-            @Override
-            public void onFailure(Call<ActivityStats> call, Throwable t) {
-
-            }
-
         });
 
         stravaUsername = findViewById(R.id.tvUsername);

@@ -17,8 +17,6 @@ import retrofit2.http.Query;
 public interface StravaAPI
 {
 
-    //Integer stravaID = StravaAuthenticateActivity.getStravaAccessToken();
-
     //get athlete information
     @GET("athlete")
     Call<Athlete> getAthlete(@Header("Authorization") String value);

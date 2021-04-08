@@ -60,20 +60,21 @@
 
     <TextView
         android:id="@+id/tvStravaTotalRunMiles"
-        android:layout_width="154dp"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="51dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="443dp"
-        android:layout_marginEnd="196dp"
-        android:layout_marginRight="196dp"
-        android:layout_marginBottom="269dp"
-        android:text="Strava Total Run Miles" />
+        android:layout_marginStart="131dp"
+        android:layout_marginLeft="131dp"
+        android:layout_marginTop="385dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginBottom="295dp"
+        android:text="Strava Total Run Miles"
+        android:textColor="@color/black" />
 
 </RelativeLayout>
