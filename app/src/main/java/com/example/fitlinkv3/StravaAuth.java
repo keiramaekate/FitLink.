@@ -13,7 +13,6 @@ import java.util.Collection;
 
 public class StravaAuth extends StravaAuthenticateActivity {
 
-    //Strava authentication
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -54,6 +54,31 @@ public class ProfilePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
 
+        //set menu to inflate
+        public boolean onCreateOptionsMenu(Menu menu){
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.toolbar_menu, menu);
+            return super.onCreateOptionsMenu(menu);
+        }
+
+        // code to inflate the menu items
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId())
+            {
+                case R.id.Search:
+                    Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.Settings:
+                    Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.Help:
+                    Toast.makeText(getApplicationContext(), "You selected Get Help", Toast.LENGTH_LONG).show();
+                    break;
+                default:
+            }
+            return ProfilePage.super.onOptionsItemSelected(item);
+        }
+
         //Get athlete information using retrofit call
         //Access token is called to make the API call
         String accessToken = StravaAuthenticateActivity.getStravaAccessToken(this);
@@ -158,39 +183,6 @@ public class ProfilePage extends AppCompatActivity {
                 }
                 return false;
             }});
-
-        rightIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ProfilePage.this, "You selected settings", Toast.LENGTH_SHORT).show();
-            }
-
-            //set menu to inflate
-            public boolean onCreateOptionsMenu(Menu menu){
-                MenuInflater inflater = getMenuInflater();
-                inflater.inflate(R.menu.toolbar_menu, menu);
-                return ProfilePage.super.onCreateOptionsMenu(menu);
-                //getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-                //return true;
-            }
-
-            // code to inflate the menu items
-            public boolean onOptionsItemSelected(MenuItem item) {
-                switch (item.getItemId())
-                {
-                    case R.id.Search:
-                        Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.Settings:
-                        Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.Help:
-                        Toast.makeText(getApplicationContext(), "You selected Get Help", Toast.LENGTH_LONG).show();
-                        break;
-                    default:
-                }
-                return ProfilePage.super.onOptionsItemSelected(item);
-            }
         });
     }
 }
