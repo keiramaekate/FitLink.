@@ -1,6 +1,6 @@
 package com.example.fitlinkv3.retrofit;
 
-//ActivityStats variables taken from Strava API
+//ActivityStats variables taken from Strava API (removed unused data like swim)
 public class ActivityStats
 {
     //The longest distance ridden by the athlete.
@@ -10,52 +10,41 @@ public class ActivityStats
     private Double biggest_climb_elevation_gain;
 
     //The recent (last 4 weeks) ride stats for the athlete.
-    private Integer recent_ride_totals;
+    private RideTotals recent_ride_totals;
 
     //The recent (last 4 weeks) run stats for the athlete.
-    private Integer recent_run_totals;
-
-    //The recent (last 4 weeks) swim stats for the athlete.
-    private Integer recent_swim_totals;
-
-    //The year to date ride stats for the athlete.
-    private Integer ytd_ride_totals;
-
-    //The year to date run stats for the athlete.
-    private Integer ytd_run_totals;
-
-    //The year to date swim stats for the athlete.
-    private Integer ytd_swim_totals;
+    private RideTotals recent_run_totals;
 
     //The all time ride stats for the athlete.
-    private Integer all_ride_totals;
+    private RideTotals all_ride_totals;
 
     //The all time run stats for the athlete.
-    private Integer all_run_totals;
+    private RideTotals all_run_totals;
 
-    //The all time swim stats for the athlete.
-    private Integer all_swim_totals;
 
     //functions to call specific user statistics
     public Double getBiggest_ride_distance() {return biggest_ride_distance;}
 
     public Double getBiggest_climb_elevation_gain(){return biggest_climb_elevation_gain;}
 
-    public Integer getRecent_ride_totals(){return recent_ride_totals;}
+    public Double getRecent_ride_total_distance(){return recent_ride_totals.distance;}
 
-    public Integer getRecent_run_totals(){return recent_run_totals;}
+    public Object getRecent_run_totals(){return recent_run_totals;}
 
-    public Integer getRecent_swim_totals(){return recent_swim_totals;}
+    public Object getAll_ride_totals(){return all_ride_totals;}
 
-    public Integer getYtd_ride_totals(){return ytd_ride_totals;}
+    public Object getAll_run_totals(){return all_run_totals;}
 
-    public Integer getYtd_run_totals(){return ytd_run_totals;}
+    public Double getAll_run_totals_distance(){return all_run_totals.distance;}
 
-    public Integer getYtd_swim_totals(){return ytd_swim_totals;}
-
-    public Integer getAll_ride_totals(){return all_ride_totals;}
-
-    public Integer getAll_run_totals(){return all_run_totals;}
-
-    public Integer getAll_swim_totals(){return all_swim_totals;}
+    public class RideTotals
+    {
+        private int count;
+        private double distance;
+        private int moving_time;
+        private int elapsed_time;
+        private double elevation_gain;
+        private int achievement_count;
+    }
 }
+

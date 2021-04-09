@@ -49,7 +49,6 @@ public class ProfilePage extends AppCompatActivity {
     //athlete stats
     TextView stravaRunMiles;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +78,7 @@ public class ProfilePage extends AppCompatActivity {
                                 .into(stravaImage);
 
                         stravaId = stravaresponse.getId();
-                        //retrofit api call for athletestats using above id variable
+                        //retrofit api call for AthleteStats using above id variable
                         ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
                         {
                             @Override
@@ -90,7 +89,8 @@ public class ProfilePage extends AppCompatActivity {
                                     ActivityStats stravaresponse = response.body();
                                     if(stravaresponse !=null)
                                     {
-                                        stravaRunMiles.setText(stravaresponse.getAll_run_totals());
+                                        Double TotalMiles = stravaresponse.getAll_run_totals_distance();
+                                        stravaRunMiles.setText(Double.toString(TotalMiles));
                                     }
                                 }
                             }
