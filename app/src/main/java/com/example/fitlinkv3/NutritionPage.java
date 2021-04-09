@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,8 +38,30 @@ public class NutritionPage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
-        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
+
+        //set menu to inflate
+        public boolean onCreateOptionsMenu(Menu menu){
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.toolbar_menu, menu);
+            getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+            return true;
+        }
+
+        // code to inflate the menu items
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId())
+            {
+                case R.id.settings:
+                    Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.chatbot_assistant:
+                    Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
+                    break;
+                default:
+            }
+            return super.onOptionsItemSelected(item);
+        }
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -79,39 +99,7 @@ public class NutritionPage extends AppCompatActivity {
             }
         });
 
-        rightIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(NutritionPage.this, "You selected settings", Toast.LENGTH_SHORT).show();
-            }
 
-            //set menu to inflate
-            public boolean onCreateOptionsMenu(Menu menu){
-                MenuInflater inflater = getMenuInflater();
-                inflater.inflate(R.menu.toolbar_menu, menu);
-                return NutritionPage.super.onCreateOptionsMenu(menu);
-                //getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-                //return true;
-            }
-
-            // code to inflate the menu items
-            public boolean onOptionsItemSelected(MenuItem item) {
-                switch (item.getItemId())
-                {
-                    case R.id.Search:
-                        Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.Settings:
-                        Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.Help:
-                        Toast.makeText(getApplicationContext(), "You selected Get Help", Toast.LENGTH_LONG).show();
-                        break;
-                    default:
-                }
-                return NutritionPage.super.onOptionsItemSelected(item);
-            }
-        });
 
         CalendarView cv = (CalendarView)
                 findViewById(R.id.cv);
