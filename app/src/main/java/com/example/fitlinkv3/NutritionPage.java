@@ -54,14 +54,13 @@ public class NutritionPage extends AppCompatActivity {
             {
                 case R.id.settings:
                     Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                    break;
+                    newSettings();
                 case R.id.chatbot_assistant:
                     Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                    break;
+                    newChatbot();
                 default:
-            }
-            return super.onOptionsItemSelected(item);
-        }
+            return super.onOptionsItemSelected(item):
+        }}
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -119,5 +118,11 @@ public class NutritionPage extends AppCompatActivity {
 //                startActivity(info);
 //            }
 //        });
+    }
+
+    private void newChatbot() {
+    }
+
+    private void newSettings() {
     }
 }

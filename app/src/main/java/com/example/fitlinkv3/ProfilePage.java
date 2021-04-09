@@ -2,22 +2,36 @@ package com.example.fitlinkv3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
 import com.squareup.picasso.Picasso;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,8 +39,16 @@ import retrofit2.Response;
 
 public class ProfilePage extends AppCompatActivity {
 
+    //profile info
     TextView stravaUsername;
     ImageView stravaImage;
+
+    //ID for stats api call
+    public Integer stravaId;
+
+    //athlete stats
+    TextView stravaRunMiles;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,57 +59,94 @@ public class ProfilePage extends AppCompatActivity {
         public boolean onCreateOptionsMenu(Menu menu){
             MenuInflater inflater = getMenuInflater();
             inflater.inflate(R.menu.toolbar_menu, menu);
-            getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-            return true;
+            return super.onCreateOptionsMenu(menu);
         }
 
         // code to inflate the menu items
         public boolean onOptionsItemSelected(MenuItem item) {
             switch (item.getItemId())
             {
-                case R.id.settings:
+                case R.id.Search:
                     Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                case R.id.chatbot_assistant:
+                    break;
+                case R.id.Settings:
                     Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.Help:
+                    Toast.makeText(getApplicationContext(), "You selected Get Help", Toast.LENGTH_LONG).show();
+                    break;
                 default:
             }
             return ProfilePage.super.onOptionsItemSelected(item);
         }
 
-        //Get athlete information
+        //Get athlete information using retrofit call
+        //Access token is called to make the API call
         String accessToken = StravaAuthenticateActivity.getStravaAccessToken(this);
-        ServiceGenerator.getEndPointInterface().getAthlete("Bearer " + accessToken).enqueue(new Callback<Athlete>() {
+
+        //Service generator (retrofit)
+        ServiceGenerator.getEndPointInterface().getAthlete("Bearer "+ accessToken).enqueue(new Callback<Athlete>()
+        {
             @Override
-            public void onResponse(Call<Athlete> call, Response<Athlete> response) {
-                if (response != null && response.isSuccessful()) {
+            public void onResponse(Call<Athlete> call, Response<Athlete> response)
+            {
+                if (response != null && response.isSuccessful())
+                {
                     Athlete stravaresponse = response.body();
-                    if (stravaresponse != null) {
+                    if(stravaresponse !=null)
+                    {
                         stravaUsername.setText(stravaresponse.getUsername());
                         //set profile picture
                         Picasso.get()
                                 .load(stravaresponse.getProfile())
-                                //.placeholder(R.drawable.fitlink_logo)
+                                .placeholder(R.drawable.fitlink_logo)
                                 //.error(R.drawable.bday_icon)
                                 .into(stravaImage);
+
+                        stravaId = stravaresponse.getId();
+                        //retrofit api call for athletestats using above id variable
+                        ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
+                        {
+                            @Override
+                            public void onResponse(Call<ActivityStats> call, Response<ActivityStats> response)
+                            {
+                                if (response != null && response.isSuccessful())
+                                {
+                                    ActivityStats stravaresponse = response.body();
+                                    if(stravaresponse !=null)
+                                    {
+                                        stravaRunMiles.setText(stravaresponse.getAll_run_totals());
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<ActivityStats> call, Throwable t) {
+
+                            }
+
+                        });
                     }
                 }
             }
 
-
             @Override
-            public void onFailure(Call<Athlete> call, Throwable t) {
+            public void onFailure(Call<Athlete> call, Throwable t)
+            {
 
             }
         });
 
         stravaUsername = findViewById(R.id.tvUsername);
         stravaImage = findViewById(R.id.ivStravaImage);
+        stravaRunMiles = findViewById(R.id.tvStravaTotalRunMiles);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
+        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
         // Assign and initialise variable
@@ -123,6 +182,7 @@ public class ProfilePage extends AppCompatActivity {
                         return true;
                 }
                 return false;
-            }
+            }});
         });
-    }}
+    }
+}

@@ -4,16 +4,12 @@
 
 <!--    search widget-->
     <item
-        android:id="@+id/Search"
+        android:id="@+id/Settingd"
         android:title="@string/search"
         app:actionViewClass="android.widget.SearchView" />
 
     <item
-        android:id="@+id/Settings"
+        android:id="@+id/chatbot_assistant"
         android:title="@string/settings" />
-
-    <item
-        android:id="@+id/Help"
-        android:title="@string/get_help" />
 
 </menu>
