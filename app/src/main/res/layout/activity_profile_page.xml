@@ -28,16 +28,20 @@
         android:id="@+id/tvUsername"
         android:layout_width="191dp"
         android:layout_height="78dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="89dp"
-        android:layout_marginRight="89dp"
-        android:layout_marginBottom="360dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginLeft="103dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:layout_marginBottom="361dp"
         android:gravity="center"
         android:padding="16dp"
         android:textAlignment="center"
-        android:textColor="@color/text_icons"
+        android:textSize="15dp"
         tools:text="Strava username" />
 
     <ImageView
@@ -60,15 +64,66 @@
 
     <TextView
         android:id="@+id/tvStravaTotalRunMiles"
-        android:layout_width="176dp"
-        android:layout_height="51dp"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginRight="93dp"
-        android:layout_marginBottom="302dp"
-        tools:text="Strava longest bike"
-        android:textColor="@color/text_icons" />
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginRight="177dp"
+        android:layout_marginBottom="311dp"
+        tools:text="Total Run Miles" />
+
+    <TextView
+        android:id="@+id/tvStravaRecentRunMiles"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginRight="178dp"
+        android:layout_marginBottom="239dp"
+        tools:text="Recent Run Miles" />
+
+    <TextView
+        android:id="@+id/tvStravaRecentRideMiles"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="207dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginRight="-7dp"
+        android:layout_marginBottom="238dp"
+        tools:text="Recent Ride Miles" />
+
+    <TextView
+        android:id="@+id/tvStravaTotalRideMiles"
+        android:layout_width="196dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="308dp"
+        tools:text="Recent Ride Miles" />
 
 </RelativeLayout>

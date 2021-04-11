@@ -20,5 +20,7 @@ public interface StravaAPI
     @GET("athlete")
     Call<Athlete> getAthlete(@Header("Authorization") String value);
 
+    @GET("athletes/{id}/stats")
+    Call<ActivityStats> getStats(@Header("Authorization") String value, @Path("id") int stravaId);
 
 }
