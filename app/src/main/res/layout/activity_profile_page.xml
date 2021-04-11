@@ -38,7 +38,7 @@
         android:padding="16dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        tools:text="test test" />
+        tools:text="Strava username" />
 
     <ImageView
         android:id="@+id/ivStravaImage"
@@ -62,19 +62,13 @@
         android:id="@+id/tvStravaTotalRunMiles"
         android:layout_width="176dp"
         android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginLeft="131dp"
-        android:layout_marginTop="385dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:layout_marginBottom="295dp"
-        android:text="Strava Total Run Miles"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginBottom="302dp"
+        tools:text="Strava longest bike"
         android:textColor="@color/black" />
 
 </RelativeLayout>
