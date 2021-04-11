@@ -22,7 +22,7 @@
             app:itemTextColor="@drawable/selector"
             app:itemIconTint="@drawable/selector"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:itemBackground="@color/holo_blue_dark"
+            app:itemBackground="@color/Primary_colour"
             app:menu="@menu/menu_nav"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="43dp" />
@@ -64,7 +64,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:src="@color/holo_blue_dark"
+                android:src="@color/Primary_colour"
                 tools:ignore="ContentDescription" />
 
             <LinearLayout
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article 1"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article description"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
@@ -111,7 +111,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:src="@color/holo_blue_dark" />
+                android:src="@color/Primary_colour" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article 2"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -134,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article description"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
@@ -157,7 +157,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:src="@color/holo_blue_dark" />
+                android:src="@color/Primary_colour" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article 3"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -180,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Article description"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_icons"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>

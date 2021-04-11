@@ -5,6 +5,7 @@
 <!--    search widget-->
     <item
         android:id="@+id/Settings"
+        android:checkable="false"
         android:title="@string/search"
         app:actionViewClass="android.widget.SearchView" />
 

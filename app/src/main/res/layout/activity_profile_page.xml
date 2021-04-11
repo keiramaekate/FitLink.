@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemBackground="@color/holo_blue_dark"
+        app:itemBackground="@color/Primary_colour"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_nav"
@@ -37,7 +37,7 @@
         android:gravity="center"
         android:padding="16dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/text_icons"
         tools:text="Strava username" />
 
     <ImageView
@@ -69,6 +69,6 @@
         android:layout_marginRight="93dp"
         android:layout_marginBottom="302dp"
         tools:text="Strava longest bike"
-        android:textColor="@color/black" />
+        android:textColor="@color/text_icons" />
 
 </RelativeLayout>

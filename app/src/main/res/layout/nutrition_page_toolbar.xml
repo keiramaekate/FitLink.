@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar2"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/holo_blue_dark"
+    android:layout_height="55dp"
+    android:background="@color/Primary_colour"
     android:minHeight="?attr/actionBarSize"
-    android:padding="16dp"
+    android:padding="10dp"
     android:theme="?attr/actionBarTheme">
 
     <ImageView
@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:foregroundGravity="center"
         android:src="@drawable/baseline_restaurant_white_18dp" />
 
     <TextView
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
+        android:gravity="center"
         android:layout_toEndOf="@id/toolbar_icon"
         android:text="Nutrition"
         android:textColor="@android:color/white"
