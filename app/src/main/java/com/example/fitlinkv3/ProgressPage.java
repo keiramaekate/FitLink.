@@ -17,6 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 public class ProgressPage extends AppCompatActivity {
 
@@ -28,16 +29,18 @@ public class ProgressPage extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
         TextView title = findViewById(R.id.toolbar_title);
-        /*TableLayout tableLayout = findViewById(R.id.tab_layout);
-        TabItem tabActivity = findViewById(R.id.activity_tab);
-        TabItem tabAchievements = findViewById(R.id.achievements_tab);
-        ViewPager viewPager = findViewById(R.id.viewPager);*/
 
-        /*//This section doesn't work - cannot locate 'tabLayout' for tabLayout.getTabCount());
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        TabItem progressTab = findViewById(R.id.progressTab);
+        TabItem achievementsTab = findViewById(R.id.achiementsTab);
+        ViewPager viewPager = findViewById(R.id.viewPager);
+
+
+        //This section doesn't work - cannot locate 'tabLayout' for tabLayout.getTabCount());
         PagerAdapter pagerAdapter = pagerAdapter = new
                 PagerAdapter(getSupportFragmentManager(),
                     tabLayout.getTabCount());
-        viewPager.setAdapter(pagerAdapter);*/
+        viewPager.setAdapter(pagerAdapter);
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);

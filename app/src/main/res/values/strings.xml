@@ -22,4 +22,7 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="profile">Profile</string>
     <string name="explore">Explore</string>
+    <string name="activity">Activity</string>
+    <string name="achievements" />
+    <string name="achievements_fragment">Achievements Fragment</string>
 </resources>

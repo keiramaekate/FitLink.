@@ -5,8 +5,7 @@
     android:layout_height="55dp"
     android:background="@color/Primary_colour"
     android:minHeight="?attr/actionBarSize"
-    android:padding="10dp"
-    android:theme="?attr/actionBarTheme">
+    android:padding="10dp">
 
     <ImageView
         android:id="@+id/toolbar_icon"
@@ -22,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
-        android:gravity="center"
+        android:foregroundGravity="center"
         android:layout_toEndOf="@id/toolbar_icon"
         android:text="@string/profile"
         android:textColor="@android:color/white"

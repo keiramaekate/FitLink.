@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
-        android:gravity="center"
+        android:foregroundGravity="center"
         android:layout_toEndOf="@id/toolbar_icon"
         android:text="Nutrition"
         android:textColor="@android:color/white"

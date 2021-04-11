@@ -29,7 +29,6 @@ public class ExplorePage extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
-        ImageButton rightIcon = findViewById(R.id.settings);
         TextView title = findViewById(R.id.toolbar_title);
 
         // Assign and initialise variable
@@ -68,13 +67,6 @@ public class ExplorePage extends AppCompatActivity {
             }
         });
 
-
-        rightIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ExplorePage.this, "You selected settings", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         // open headspace website
         ImageButton headspaceBtn = (ImageButton) findViewById(R.id.headspaceBtn);
