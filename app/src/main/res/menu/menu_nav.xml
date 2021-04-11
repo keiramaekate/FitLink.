@@ -4,25 +4,25 @@
 
     <item
         android:id="@+id/Explore"
-        android:icon="@drawable/outline_explore_white_18dp"
+        android:icon="@drawable/baseline_explore_black_24dp"
         android:title="Explore"
         />
 
     <item
         android:id="@+id/Progress"
-        android:icon="@drawable/outline_bar_chart_white_18dp"
+        android:icon="@drawable/baseline_bar_chart_black_24dp"
         android:title="Progress"
         />
 
     <item
         android:id="@+id/Nutrition"
-        android:icon="@drawable/baseline_restaurant_white_18dp"
+        android:icon="@drawable/baseline_restaurant_black_24dp"
         android:title="Nutrition"
         />
 
     <item
         android:id="@+id/Profile"
-        android:icon="@drawable/baseline_account_circle_white_18dp"
+        android:icon="@drawable/baseline_account_circle_black_24dp"
         android:title="Profile"
         />
 

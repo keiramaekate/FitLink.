@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:foregroundGravity="center"
-        android:src="@drawable/baseline_restaurant_white_18dp" />
+        android:src="@drawable/baseline_restaurant_black_24dp" />
 
     <TextView
         android:id="@+id/toolbar_title"
@@ -22,10 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="16dp"
-        android:foregroundGravity="center"
         android:layout_toEndOf="@id/toolbar_icon"
+        android:foregroundGravity="center"
         android:text="Nutrition"
-        android:textColor="@android:color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/text_icons"
         android:textSize="25dp"
         tools:ignore="RtlCompat" />
 

@@ -27,7 +27,11 @@ public class ActivityStats
 
     public Double getBiggest_climb_elevation_gain(){return biggest_climb_elevation_gain;}
 
+
     public Object getRecent_ride_totals(){return recent_ride_totals;}
+
+    public Double getRecent_ride_total_distance(){return recent_ride_totals.distance;}
+
 
     public Object getRecent_run_totals(){return recent_run_totals;}
 
@@ -36,6 +40,7 @@ public class ActivityStats
     public Object getAll_run_totals(){return all_run_totals;}
 
     public Double getAll_run_totals_distance(){return all_run_totals.distance;}
+
 
     public Double getAll_ride_totals_distance(){return all_ride_totals.distance;}
 

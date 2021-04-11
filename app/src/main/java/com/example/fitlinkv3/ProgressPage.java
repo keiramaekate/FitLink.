@@ -35,12 +35,28 @@ public class ProgressPage extends AppCompatActivity {
         TabItem achievementsTab = findViewById(R.id.achiementsTab);
         ViewPager viewPager = findViewById(R.id.viewPager);
 
-
-        //This section doesn't work - cannot locate 'tabLayout' for tabLayout.getTabCount());
-        PagerAdapter pagerAdapter = pagerAdapter = new
+        PagerAdapter pagerAdapter = new
                 PagerAdapter(getSupportFragmentManager(),
                     tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
