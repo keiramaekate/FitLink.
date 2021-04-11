@@ -4,7 +4,7 @@
 
 <!--    search widget-->
     <item
-        android:id="@+id/Settingd"
+        android:id="@+id/Settings"
         android:title="@string/search"
         app:actionViewClass="android.widget.SearchView" />
 

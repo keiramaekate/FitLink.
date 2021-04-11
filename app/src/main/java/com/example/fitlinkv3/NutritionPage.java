@@ -40,27 +40,6 @@ public class NutritionPage extends AppCompatActivity {
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
         TextView title = findViewById(R.id.toolbar_title);
 
-        //set menu to inflate
-        public boolean onCreateOptionsMenu(Menu menu){
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.toolbar_menu, menu);
-            getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-            return true;
-        }
-
-        // code to inflate the menu items
-        public boolean onOptionsItemSelected(MenuItem item) {
-            switch (item.getItemId())
-            {
-                case R.id.settings:
-                    Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                    newSettings();
-                case R.id.chatbot_assistant:
-                    Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                    newChatbot();
-                default:
-            return super.onOptionsItemSelected(item):
-        }}
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
@@ -99,7 +78,6 @@ public class NutritionPage extends AppCompatActivity {
         });
 
 
-
         CalendarView cv = (CalendarView)
                 findViewById(R.id.cv);
         RecyclerView reccv = (RecyclerView)
@@ -120,9 +98,25 @@ public class NutritionPage extends AppCompatActivity {
 //        });
     }
 
-    private void newChatbot() {
+    //set menu to inflate
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
     }
 
-    private void newSettings() {
-    }
-}
+    // code to inflate the menu items
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Settings:
+                Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
+                //newSettings();
+                return true;
+            case R.id.chatbot_assistant:
+                Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
+                //new(chatbotAssistant();
+                return true;
+            default:
+        }
+        return super.onOptionsItemSelected(item);
+    }};
