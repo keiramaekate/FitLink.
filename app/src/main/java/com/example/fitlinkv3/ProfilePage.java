@@ -147,18 +147,23 @@ public class ProfilePage extends AppCompatActivity {
                                         //sets api the data as variables
                                         countstats.add(new ValueDataEntry("Total Runs",totalruns));
                                         countstats.add(new ValueDataEntry("Total Rides",totalrides));
-                                        countstats.add(new ValueDataEntry("Total Swimss",totalswims));
+                                        countstats.add(new ValueDataEntry("Total Swims",totalswims));
 
                                         //set piechart data
                                         pie.data(countstats);
 
+                                        //customise pie chart
                                         pie.labels().position("inside");
                                         pie.legend().title().enabled(false);
                                         pie.legend()
                                                 .position("center-bottom")
+                                                .fontSize(10)
+                                                .iconSize(10)
                                                 .itemsLayout(LegendLayout.HORIZONTAL)
                                                 .align(Align.CENTER);
+                                        pie.legend().title().enabled(false);
 
+                                        //set piechart
                                         totalStatsChart.setChart(pie);
                                     }
                                 }
