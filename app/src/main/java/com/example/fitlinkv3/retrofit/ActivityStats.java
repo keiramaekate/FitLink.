@@ -71,8 +71,19 @@ public class ActivityStats
 
     public Integer getRecent_swim_totals_count(){return recent_swim_totals.count;}
 
-    //RideTotals class
+    //returns for all-time elevation gain
 
+    public Double getAll_run_totals_elevation(){return recent_run_totals.elevation_gain;}
+
+    public Double getAll_ride_totals_elevation(){return recent_ride_totals.elevation_gain;}
+
+    //returns for all-time elapsed time
+
+    public Integer getAll_run_totals_time(){return all_run_totals.elapsed_time;}
+
+    public Integer getAll_ride_totals_time(){return all_ride_totals.elapsed_time;}
+
+    //RideTotals class
     public class RideTotals
     {
         private int count;
