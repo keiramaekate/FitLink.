@@ -13,6 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.anychart.AnyChart;
+import com.anychart.AnyChartView;
+import com.anychart.chart.common.dataentry.DataEntry;
+import com.anychart.chart.common.dataentry.ValueDataEntry;
+import com.anychart.charts.Pie;
+import com.anychart.enums.Align;
+import com.anychart.enums.LegendLayout;
 import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
@@ -21,6 +28,8 @@ import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -41,10 +50,18 @@ public class ProfilePage extends AppCompatActivity {
     TextView stravaRecentRunMiles;
     TextView stravaRecentRideMiles;
 
+    //PieChart setup
+    AnyChartView totalStatsChart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+        //Create instance of piechart
+        Pie pie = AnyChart.pie();
+        //Arraylist for the piechart
+        List<DataEntry> countstats = new ArrayList<>();
 
         //Get athlete information using retrofit call
         //Access token is called to make the API call
@@ -111,7 +128,7 @@ public class ProfilePage extends AppCompatActivity {
                                         //Turn to 2 decimal places
                                         String RoundedRecentRunMiles = String.valueOf(df.format(RecentRunMiles));
 
-                                        stravaRecentRunMiles.setText("Recent Run Distance: "+RoundedRecentRunMiles+"Miles");
+                                        stravaRecentRunMiles.setText("Recent Run Distance:  "+RoundedRecentRunMiles+"Miles");
 
                                         //Get recent ride total meters
                                         Double RecentRideMeters = stravaresponse.getRecent_ride_totals_distance();
@@ -122,6 +139,27 @@ public class ProfilePage extends AppCompatActivity {
                                         String RoundedRecentRideMiles = String.valueOf(df.format(RecentRideMiles));
                                         stravaRecentRideMiles.setText("Recent Ride Distance: "+RoundedRecentRideMiles+"Miles");
 
+                                        //sets up the pie chart with the data
+                                        int totalruns = stravaresponse.getAll_run_totals_count();
+                                        int totalrides = stravaresponse.getAll_ride_totals_count();
+                                        int totalswims = stravaresponse.getAll_Swim_totals_count();
+
+                                        //sets api the data as variables
+                                        countstats.add(new ValueDataEntry("Total Runs",totalruns));
+                                        countstats.add(new ValueDataEntry("Total Rides",totalrides));
+                                        countstats.add(new ValueDataEntry("Total Swimss",totalswims));
+
+                                        //set piechart data
+                                        pie.data(countstats);
+
+                                        pie.labels().position("inside");
+                                        pie.legend().title().enabled(false);
+                                        pie.legend()
+                                                .position("center-bottom")
+                                                .itemsLayout(LegendLayout.HORIZONTAL)
+                                                .align(Align.CENTER);
+
+                                        totalStatsChart.setChart(pie);
                                     }
                                 }
                             }
@@ -150,6 +188,8 @@ public class ProfilePage extends AppCompatActivity {
         stravaTotalRideMiles = findViewById(R.id.tvStravaTotalRideMiles);
         stravaRecentRunMiles = findViewById(R.id.tvStravaRecentRunMiles);
         stravaRecentRideMiles = findViewById(R.id.tvStravaRecentRideMiles);
+
+        totalStatsChart = findViewById(R.id.TotalStatsChart);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -215,4 +255,5 @@ public class ProfilePage extends AppCompatActivity {
             default:
         }
         return super.onOptionsItemSelected(item);
-    }}
+    }
+}
