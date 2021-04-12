@@ -142,7 +142,7 @@ public class ProfilePage extends AppCompatActivity {
                                         //sets up the pie chart with the data
                                         int totalruns = stravaresponse.getAll_run_totals_count();
                                         int totalrides = stravaresponse.getAll_ride_totals_count();
-                                        int totalswims = stravaresponse.getAll_Swim_totals_count();
+                                        int totalswims = stravaresponse.getAll_swim_totals_count();
 
                                         //sets api the data as variables
                                         countstats.add(new ValueDataEntry("Total Runs",totalruns));
@@ -156,12 +156,13 @@ public class ProfilePage extends AppCompatActivity {
                                         pie.labels().position("inside");
                                         pie.legend().title().enabled(false);
                                         pie.legend()
-                                                .position("center-bottom")
-                                                .fontSize(10)
-                                                .iconSize(10)
+                                                .position("inside")
+                                                .fontSize(8)
+                                                .iconSize(8)
                                                 .itemsLayout(LegendLayout.HORIZONTAL)
                                                 .align(Align.CENTER);
                                         pie.legend().title().enabled(false);
+
 
                                         //set piechart
                                         totalStatsChart.setChart(pie);

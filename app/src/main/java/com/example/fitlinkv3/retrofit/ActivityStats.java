@@ -61,7 +61,15 @@ public class ActivityStats
 
     public Integer getAll_ride_totals_count(){return all_ride_totals.count;}
 
-    public Integer getAll_Swim_totals_count(){return all_swim_totals.count;}
+    public Integer getAll_swim_totals_count(){return all_swim_totals.count;}
+
+    //returns for recent count
+
+    public Integer getRecent_run_totals_count(){return recent_run_totals.count;}
+
+    public Integer getRecent_ride_totals_count(){return recent_ride_totals.count;}
+
+    public Integer getRecent_swim_totals_count(){return recent_swim_totals.count;}
 
     //RideTotals class
 
