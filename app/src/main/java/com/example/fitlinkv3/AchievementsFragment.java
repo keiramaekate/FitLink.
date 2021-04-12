@@ -2,11 +2,15 @@ package com.example.fitlinkv3;
 
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.fitlinkv3.retrofit.ActivityStats;
@@ -26,7 +30,7 @@ public class AchievementsFragment extends Fragment {
     //ID setup for athlete info
     public int stravaId;
 
-    private Image TotalRun;
+    private ImageView TotalRun;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -90,21 +94,27 @@ public class AchievementsFragment extends Fragment {
                                         //Get total counts for achievement
                                         int TotalRunCount = stravaresponse.getAll_run_totals_count();
                                         int TotalRideCount = stravaresponse.getAll_ride_totals_count();
+                                        int TotalSwimCount = stravaresponse.getAll_swim_totals_count();
 
-                                        int TotalActivityCount = TotalRunCount+TotalRideCount;
+                                        int TotalActivityCount = TotalRunCount+TotalRideCount+TotalSwimCount;
 
                                         //put if statement here\\
-
-                                        if (TotalActivityCount < 3 ) {
-                                            //set image to 'beginner'
+                                        if (TotalActivityCount >= 10 )
+                                        {
+                                            //set image to gold
+                                            TotalRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run));
+                                            Toast.makeText(getContext(), "gold", Toast.LENGTH_LONG).show();
                                         }
-                                            else  if (TotalActivityCount >=  3 ){
-
+                                            else  if (TotalActivityCount >= 6 ){
+                                            //set silver
+                                            TotalRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run));
+                                            Toast.makeText(getContext(), "silverrun", Toast.LENGTH_LONG).show();
                                         }
-                                            else if (TotalActivityCount >= 6 ){
-
+                                            //set bronze
+                                            else if (TotalActivityCount < 5 ){
+                                            TotalRun.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run));
+                                            Toast.makeText(getContext(), "bronze", Toast.LENGTH_LONG).show();
                                         }
-
 
                                         //Get total distance for achievement
                                         Double TotalRunMeters = stravaresponse.getAll_run_totals_distance();
@@ -174,7 +184,8 @@ public class AchievementsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_achievements, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_achievements, container, false);
+        TotalRun = view.findViewById(R.id.TotalRun);
+        return view;
     }
 }
