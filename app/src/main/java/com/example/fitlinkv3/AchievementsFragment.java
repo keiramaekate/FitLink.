@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.anychart.chart.common.dataentry.ValueDataEntry;
-import com.anychart.enums.Align;
-import com.anychart.enums.LegendLayout;
 import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
