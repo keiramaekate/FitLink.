@@ -2,54 +2,80 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusableInTouchMode="false"
     tools:context=".AddingShat">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/nutrition_page_toolbar"
+        android:layout_width="414dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/Primary_colour"
         android:text="Update"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="614dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609" />
 
     <Button
         android:id="@+id/delete"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/Dark_primary_colour"
         android:text="All Delete"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="538dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609" />
 
     <EditText
         android:id="@+id/caloriesint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
+        android:background="@drawable/textview_border"
         android:ems="10"
         android:hint="enter_calories"
         android:inputType="number"
+        android:padding="10dp"
         android:textColor="#673AB7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457"
+        app:layout_constraintVertical_bias="0.314"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/proteinint"
-        android:layout_width="211dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:autofillHints=""
+        android:background="@drawable/textview_border"
         android:ems="10"
-        android:hint="enter_protein"
+        android:hint="@string/enter_protein"
         android:inputType="number"
+        android:padding="10dp"
         android:textColor="#3F51B5"
         android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,11 +88,12 @@
         android:id="@+id/fatint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:autofillHints=""
+        android:background="@drawable/textview_border"
         android:ems="10"
         android:hint="enter_fat"
         android:inputType="number"
+        android:padding="10dp"
         android:textColor="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
@@ -78,9 +105,14 @@
         android:id="@+id/insertbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="insert"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="533dp" />
+        android:background="@color/Primary_colour"
+        android:text="insert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

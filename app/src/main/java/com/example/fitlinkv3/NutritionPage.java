@@ -1,10 +1,14 @@
 package com.example.fitlinkv3;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageView;
@@ -16,23 +20,67 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 
 public class NutritionPage extends AppCompatActivity {
 
-    private Database1 database1;
+     Database1 database1;
     private CalendarView cv;
+    private PieChart piechart;
     private TextView date1;
-
+    SQLiteDatabase db;
+    SQLiteOpenHelper helper;
     private RecyclerView reccv;
-    FloatingActionButton buttonadd;
+    Button button;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
         setContentView(R.layout.activity_nutrition_page);
+
+        //button to new activity
+        button = (Button) this.findViewById(R.id.button);
+        button.setOnClickListener(v -> {
+
+            Intent i = new Intent(NutritionPage.this,AddingShat.class);
+            NutritionPage.this.startActivity(i);
+
+        });
+//pie chart section
+        piechart = (PieChart) findViewById(R.id.Piechart);
+        piechart.setUsePercentValues(true);
+        piechart.getDescription().setEnabled(false);
+        piechart.setExtraOffsets(5, 10, 5, 5);
+
+        piechart.setDragDecelerationFrictionCoef(0.95f);
+
+        piechart.setDrawHoleEnabled(true);
+        piechart.setHoleColor(Color.WHITE);
+        piechart.setTransparentCircleRadius(31f);
+
+        ArrayList<PieEntry> yValues = new ArrayList<>();
+        yValues.add(new PieEntry(34f, "Kcal"));
+        yValues.add(new PieEntry(24f, "Protein"));
+        yValues.add(new PieEntry(34f, "FAT"));
+
+        PieDataSet dataa = new PieDataSet(yValues, "Nutrition");
+        dataa.setSliceSpace(3f);
+        dataa.setSelectionShift(5f);
+        dataa.setColors(ColorTemplate.COLORFUL_COLORS);
+        PieData data = new PieData((dataa));
+        data.setValueTextSize(10f);
+        data.setValueTextColor(Color.YELLOW);
+        piechart.setData(data);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -80,22 +128,10 @@ public class NutritionPage extends AppCompatActivity {
 
         CalendarView cv = (CalendarView)
                 findViewById(R.id.cv);
-        RecyclerView reccv = (RecyclerView)
-                findViewById(R.id.reccv);
-
-        // button doesnt open page
-        Button buttonadd = (Button)
-                findViewById(R.id.buttonadd);
-
-//        buttonadd.setOnClickListener(new View.OnClickListener() {
 //
-//            @Override
-//            public void Method(View v) {
-//                //when clicked it goes to the input page
-//                Intent info = new Intent(NutritionPage.this, AddingShat.class);
-//                startActivity(info);
-//            }
-//        });
+
+
+//
     }
 
     //set menu to inflate
@@ -119,4 +155,15 @@ public class NutritionPage extends AppCompatActivity {
             default:
         }
         return super.onOptionsItemSelected(item);
-    }};
+    }
+
+//    public void onClick(View view) {
+//        Intent i = new Intent(NutritionPage.this,AddingShat.class);
+//        NutritionPage.this.startActivity(i);
+//
+//    }
+
+
+
+}
+

@@ -25,4 +25,5 @@
     <string name="activity">Activity</string>
     <string name="achievements" />
     <string name="achievements_fragment">Achievements Fragment</string>
+    <string name="enter_protein">enter_protein</string>
 </resources>
