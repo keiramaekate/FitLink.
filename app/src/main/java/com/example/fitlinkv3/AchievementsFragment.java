@@ -1,5 +1,6 @@
 package com.example.fitlinkv3;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,9 +8,6 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.anychart.chart.common.dataentry.ValueDataEntry;
-import com.anychart.enums.Align;
-import com.anychart.enums.LegendLayout;
 import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
@@ -26,6 +24,8 @@ public class AchievementsFragment extends Fragment {
 
     //ID setup for athlete info
     public int stravaId;
+
+    private Image TotalRun;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -86,7 +86,6 @@ public class AchievementsFragment extends Fragment {
                                     if(stravaresponse !=null)
                                     {
 
-
                                         //Get total counts for achievement
                                         int TotalRunCount = stravaresponse.getAll_run_totals_count();
                                         int TotalRideCount = stravaresponse.getAll_ride_totals_count();
@@ -94,6 +93,16 @@ public class AchievementsFragment extends Fragment {
                                         int TotalActivityCount = TotalRunCount+TotalRideCount;
 
                                         //put if statement here\\
+                                        if (TotalActivityCount < 3 ) {
+                                            //set image to 'beginner'
+                                        }
+                                            else  if (TotalActivityCount >=  3 ){
+
+                                        }
+                                            else if (TotalActivityCount >= 6 ){
+
+                                        }
+
 
                                         //Get total distance for achievement
                                         Double TotalRunMeters = stravaresponse.getAll_run_totals_distance();
@@ -110,6 +119,7 @@ public class AchievementsFragment extends Fragment {
                                         String RoundedTotalDistance = String.valueOf(df.format(TotalDistance));
 
                                         //put if statement here (use RoundedTotalDistance for if statement)\\
+                                        
 
                                         //Get all-time time_elapsed
                                         int TotalRunTime = stravaresponse.getAll_run_totals_time();
@@ -118,6 +128,9 @@ public class AchievementsFragment extends Fragment {
                                         int TotalTime = TotalRunTime+TotalRideTime;
 
                                         //put if statement here\\
+                                        if (TotalTime > 60){
+
+                                        }
 
                                         //Get all-time elevation_gain
                                         Double TotalRunElevationGain = stravaresponse.getAll_run_totals_elevation();
