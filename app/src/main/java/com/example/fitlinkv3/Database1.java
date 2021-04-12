@@ -7,16 +7,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
 
+
+//@Database(entities = AddingShat.class, exportSchema = false, version = 1 )
+//public abstract class Database1 extends RoomDatabase {
 public class Database1 extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "databaseSql.db"; //TABLE NAME
+
+public static final String DATABASE_NAME = "databaseSql.db"; //TABLE NAME
     Context context;
     public Database1(Context context) {
         super(context, DATABASE_NAME, null, 1);
 //            this.context = context;
     }
-    //class Database1 extends SQLiteOpenHelper {
 
 
 

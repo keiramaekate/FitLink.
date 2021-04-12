@@ -33,7 +33,7 @@ import java.util.ArrayList;
 
 public class NutritionPage extends AppCompatActivity {
 
-     Database1 database1;
+     //Database1 database1;
     private CalendarView cv;
     private PieChart piechart;
     private TextView date1;
@@ -62,17 +62,19 @@ public class NutritionPage extends AppCompatActivity {
         piechart.setExtraOffsets(5, 10, 5, 5);
 
         piechart.setDragDecelerationFrictionCoef(0.95f);
-
+//layoyut of piechart
         piechart.setDrawHoleEnabled(true);
         piechart.setHoleColor(Color.WHITE);
         piechart.setTransparentCircleRadius(31f);
 
         ArrayList<PieEntry> yValues = new ArrayList<>();
+        // change to int and TH
         yValues.add(new PieEntry(34f, "Kcal"));
         yValues.add(new PieEntry(24f, "Protein"));
         yValues.add(new PieEntry(34f, "FAT"));
 
         PieDataSet dataa = new PieDataSet(yValues, "Nutrition");
+        //layout for the sections .
         dataa.setSliceSpace(3f);
         dataa.setSelectionShift(5f);
         dataa.setColors(ColorTemplate.COLORFUL_COLORS);
