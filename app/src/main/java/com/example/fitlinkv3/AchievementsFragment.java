@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Switch;
 
 import androidx.fragment.app.Fragment;
 
@@ -93,6 +94,7 @@ public class AchievementsFragment extends Fragment {
                                         int TotalActivityCount = TotalRunCount+TotalRideCount;
 
                                         //put if statement here\\
+
                                         if (TotalActivityCount < 3 ) {
                                             //set image to 'beginner'
                                         }
@@ -119,7 +121,7 @@ public class AchievementsFragment extends Fragment {
                                         String RoundedTotalDistance = String.valueOf(df.format(TotalDistance));
 
                                         //put if statement here (use RoundedTotalDistance for if statement)\\
-                                        
+
 
                                         //Get all-time time_elapsed
                                         int TotalRunTime = stravaresponse.getAll_run_totals_time();
