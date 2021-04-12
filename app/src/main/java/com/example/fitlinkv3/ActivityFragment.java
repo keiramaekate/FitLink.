@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.anychart.AnyChart;
@@ -19,9 +18,7 @@ import com.example.fitlinkv3.retrofit.ActivityStats;
 import com.example.fitlinkv3.retrofit.Athlete;
 import com.example.fitlinkv3.retrofit.ServiceGenerator;
 import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
-import com.squareup.picasso.Picasso;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,6 +86,7 @@ public class ActivityFragment extends Fragment {
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_activity, container, false);
+
         //set pie chart in xml
         recentStatsChart = view.findViewById(R.id.RecentStatsChart);
         //Create instance of piechart
@@ -181,7 +179,5 @@ public class ActivityFragment extends Fragment {
         // Inflate the layout for this fragment
         return view;
 
-
     }
-
 }

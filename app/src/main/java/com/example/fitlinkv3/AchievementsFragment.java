@@ -7,8 +7,25 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.anychart.chart.common.dataentry.ValueDataEntry;
+import com.anychart.enums.Align;
+import com.anychart.enums.LegendLayout;
+import com.example.fitlinkv3.retrofit.ActivityStats;
+import com.example.fitlinkv3.retrofit.Athlete;
+import com.example.fitlinkv3.retrofit.ServiceGenerator;
+import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
+
+import java.text.DecimalFormat;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class AchievementsFragment extends Fragment {
+
+    //ID setup for athlete info
+    public int stravaId;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,8 +60,96 @@ public class AchievementsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        //get access token for API calls
+        String accessToken = StravaAuthenticateActivity.getStravaAccessToken(getContext());
+        ServiceGenerator.getEndPointInterface().getAthlete("Bearer "+accessToken).enqueue(new Callback<Athlete>()
+        {
+            @Override
+            public void onResponse(Call<Athlete> call, Response<Athlete> response)
+            {
+                if (response != null && response.isSuccessful())
+                {
+                    Athlete stravaresponse = response.body();
+                    if(stravaresponse !=null)
+                    {
+                        stravaId = stravaresponse.getId();
+                        //retrofit api call for AthleteStats using above id variable
+                        ServiceGenerator.getEndPointInterface().getStats("Bearer "+accessToken,stravaId).enqueue(new Callback<ActivityStats>()
+                        {
+                            @Override
+                            public void onResponse(Call<ActivityStats> call, Response<ActivityStats> response)
+                            {
+                                if (response != null && response.isSuccessful())
+                                {
+                                    ActivityStats stravaresponse = response.body();
+                                    if(stravaresponse !=null)
+                                    {
+
+
+                                        //Get total counts for achievement
+                                        int TotalRunCount = stravaresponse.getAll_run_totals_count();
+                                        int TotalRideCount = stravaresponse.getAll_ride_totals_count();
+
+                                        int TotalActivityCount = TotalRunCount+TotalRideCount;
+
+                                        //put if statement here\\
+
+                                        //Get total distance for achievement
+                                        Double TotalRunMeters = stravaresponse.getAll_run_totals_distance();
+                                        Double TotalRideMeters = stravaresponse.getAll_ride_totals_distance();
+
+                                        //Convert distance into miles
+                                        Double TotalRunMiles = TotalRunMeters*0.000621371;
+                                        Double TotalRideMiles = TotalRideMeters*0.000621371;
+
+                                        Double TotalDistance = TotalRunMiles+TotalRideMiles;
+
+                                        //Make TotalDistance to 2 decimal places
+                                        DecimalFormat df = new DecimalFormat("##.##");
+                                        String RoundedTotalDistance = String.valueOf(df.format(TotalDistance));
+
+                                        //put if statement here (use RoundedTotalDistance for if statement)\\
+
+                                        //Get all-time time_elapsed
+                                        int TotalRunTime = stravaresponse.getAll_run_totals_time();
+                                        int TotalRideTime = stravaresponse.getAll_ride_totals_time();
+
+                                        int TotalTime = TotalRunTime+TotalRideTime;
+
+                                        //put if statement here\\
+
+                                        //Get all-time elevation_gain
+                                        Double TotalRunElevationGain = stravaresponse.getAll_run_totals_elevation();
+                                        Double TotalRideElevationGain = stravaresponse.getAll_ride_totals_elevation();
+
+                                        Double TotalElevation = TotalRunElevationGain+TotalRideElevationGain;
+
+                                        //put if statement here\\
+
+                                    }
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<ActivityStats> call, Throwable t) {
+
+                            }
+
+                        });
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Athlete> call, Throwable t)
+            {
+
+            }
+        });
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
@@ -55,5 +160,6 @@ public class AchievementsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_achievements, container, false);
+
     }
 }
