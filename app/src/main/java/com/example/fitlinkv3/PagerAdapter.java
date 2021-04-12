@@ -9,12 +9,14 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
         private int numOfTabs;
 
+        // This java code is used to
         public PagerAdapter(FragmentManager fm, int numOfTabs) {
             super(fm);
             this.numOfTabs = numOfTabs;
 
         }
 
+        // Initialize fragments for Android TabLayout
         @Override
         public Fragment getItem ( int position) {
             switch (position) {
@@ -27,6 +29,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
             }
         }
 
+        // Returns number of tabs listed within the tablayout
             @Override
             public int getCount() {
                 return numOfTabs;

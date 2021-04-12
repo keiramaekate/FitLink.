@@ -30,16 +30,19 @@ public class ProgressPage extends AppCompatActivity {
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
         TextView title = findViewById(R.id.toolbar_title);
 
+        // defining the pagerAdapter
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         TabItem progressTab = findViewById(R.id.progressTab);
         TabItem achievementsTab = findViewById(R.id.achiementsTab);
         ViewPager viewPager = findViewById(R.id.viewPager);
 
+        // This will pass the data from the tabs and display them into viewpager
         PagerAdapter pagerAdapter = new
                 PagerAdapter(getSupportFragmentManager(),
                     tabLayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
 
+        // Switches tab views
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
@@ -60,7 +63,7 @@ public class ProgressPage extends AppCompatActivity {
 
         // Assign and initialise variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-        // set screen that is selected
+        // Set screen that is selected
         bottomNavigationView.setSelectedItemId(R.id.Progress);
         // code to listen to what item is selected
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
