@@ -36,6 +36,8 @@ public class AchievementsFragment extends Fragment {
     private ImageButton TotalRideDistance;
     private ImageButton TotalRideTime;
     private ImageButton TotalRunTime;
+    private ImageButton TotalRunElevation;
+    private ImageButton TotalRideElevation;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -90,17 +92,15 @@ public class AchievementsFragment extends Fragment {
                                         if (TotalActivityCount >= 10) {
                                             //set image to gold
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_athlete));
-                                            Toast.makeText(getContext(), "gold", Toast.LENGTH_LONG).show();
                                         } else if (TotalActivityCount >= 6) {
                                             //set silver
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_pro));
-                                            Toast.makeText(getContext(), "silver", Toast.LENGTH_LONG).show();
                                         }
                                         //set bronze
                                         else if (TotalActivityCount < 5) {
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_novice));
-                                            Toast.makeText(getContext(), "bronze", Toast.LENGTH_LONG).show();
                                         }
+
                                             //Get RUN distance for achievement
                                             Double TotalRunMeters = stravaresponse.getAll_run_totals_distance();
                                             Double TotalRunMiles = TotalRunMeters * 0.000621371;
@@ -113,7 +113,7 @@ public class AchievementsFragment extends Fragment {
                                                 //set image to gold
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run_distance));
                                             }
-                                            else if(RoundedRunDistance >=40){
+                                            else if(RoundedRunDistance >=20){
                                                 //set image to silver
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_distance));
                                             }
@@ -121,10 +121,7 @@ public class AchievementsFragment extends Fragment {
                                                 //set image to bronze
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_distance));
                                             }
-                                            else if (RoundedRunDistance >= 0) {
-                                                //set image to default
-                                                TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.default_run_distance));
-                                            }
+
                                                 // Get RIDE distance for achievement
                                                 Double TotalRideMeters = stravaresponse.getAll_ride_totals_distance();
                                                 Double TotalRideMiles = TotalRideMeters * 0.000621371;
@@ -132,23 +129,102 @@ public class AchievementsFragment extends Fragment {
                                                 //Make TotalDistance to 2 decimal places
                                                 Double RoundedRideDistance = Double.valueOf(df.format(TotalRideMilesDistance));
 
-                                                if (RoundedRideDistance >= 50){
+                                                if (RoundedRideDistance >= 15){
                                                     //set image to gold
                                                     TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_distance));
                                                 }
-                                                else if(RoundedRideDistance >=40) {
+                                                else if(RoundedRideDistance >=10) {
                                                     //set image to silver
                                                     TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_ride_distance));
                                                 }
-                                                else if(RoundedRideDistance >=20) {
+                                                else if(RoundedRideDistance >=5) {
                                                     //set image to bronze
                                                     TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_ride_distance));
                                                 }
-                                                else if(RoundedRideDistance == 0){
-                                                    //set image to default
-                                                    TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.default_ride_distance));
 
+                                            //Get TOTAL RUN TIME for achievement
+                                            int TotalRunSeconds = stravaresponse.getAll_run_totals_time();
+                                            int TotalRunMinutes = TotalRunSeconds/60;
+                                            int TotalRunHours = TotalRunMinutes/60;
+
+                                            //Make TotalRunTime to 2 decimal places
+                                            Double RoundedRunTime = Double.valueOf(df.format(TotalRunHours));
+
+                                            //put if statement here\\
+                                            if (RoundedRunTime >= 10) {
+                                            //set image to gold
+                                            TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run_time));
                                             }
+                                            else if (RoundedRunTime >= 6) {
+                                            //set silver
+                                            TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_time));
+                                            }
+                                            //set bronze
+                                            else if (RoundedRunTime <= 1) {
+                                            TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_time));
+                                            }
+
+                                            //Get TOTAL RIDE TIME for achievement
+                                            int TotalRideSeconds = stravaresponse.getAll_ride_totals_time();
+                                            int TotalRideMinutes = TotalRideSeconds/60;
+                                            int TotalRideHours = TotalRideMinutes/60;
+
+                                            //Make TotalDistance to 2 decimal places
+                                            Double RoundedRideTime = Double.valueOf(df.format(TotalRideHours));
+
+                                            //put if statement here\\
+                                            if (RoundedRideTime >= 10) {
+                                            //set image to gold
+                                            TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_time));
+                                            }
+                                            else if (RoundedRideTime >= 6) {
+                                            //set silver
+                                            TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_ride_time));
+                                            }
+                                            //set bronze
+                                            else if (RoundedRideTime <= 1) {
+                                            TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_ride_time));
+                                            }
+
+                                            //get TOTAL RUN ELEVATION
+                                            Double TotalRunElevationMeters = stravaresponse.getAll_run_totals_elevation();
+
+                                            //Round to 2 dp
+                                            Double RoundedRunElevation = Double.valueOf(df.format(TotalRunElevationMeters));
+
+                                            if (RoundedRunElevation >= 10) {
+                                            //set image to gold
+                                            TotalRunElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run_elevation));
+                                             }
+                                            else if (RoundedRunElevation >= 6) {
+                                            //set silver
+                                            TotalRunElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_elevation));
+                                            }
+                                            //set bronze
+                                            else if (RoundedRunElevation <= 1) {
+                                            TotalRunElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_elevation));
+                                            }
+
+                                            //get TOTAL RIDE ELEVATION
+                                            //get TOTAL RUN ELEVATION
+                                            Double TotalRideElevationMeters = stravaresponse.getAll_ride_totals_elevation();
+
+                                            //Round to 2 dp
+                                            Double RoundedRideElevation = Double.valueOf(df.format(TotalRideElevationMeters));
+
+                                            if (RoundedRideElevation >= 10) {
+                                            //set image to gold
+                                            TotalRideElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_elevation));
+                                            }
+                                            else if (RoundedRideElevation >= 6) {
+                                            //set silver
+                                            TotalRideElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_ride_elevation));
+                                            }
+                                            //set bronze
+                                            else if (RoundedRideElevation <= 1) {
+                                            TotalRideElevation.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_ride_elevation));
+                                        }
+
                                         }
 
                                     }
@@ -186,11 +262,17 @@ public class AchievementsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_achievements, container, false);
+
         TotalActivity = view.findViewById(R.id.TotalActivity);
+
         TotalRunDistance = view.findViewById(R.id.TotalRunDistance);
         TotalRideDistance = view.findViewById(R.id.TotalRideDistance);
+
         TotalRunTime = view.findViewById(R.id.TotalRunTime);
         TotalRideTime = view.findViewById(R.id.TotalRideTime);
+
+        TotalRunElevation = view.findViewById(R.id.TotalRunElevation);
+        TotalRideElevation = view.findViewById(R.id.TotalRideElevation);
         return view;
     }
 }

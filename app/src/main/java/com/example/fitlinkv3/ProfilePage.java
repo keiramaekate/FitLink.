@@ -108,6 +108,7 @@ public class ProfilePage extends AppCompatActivity {
                                         DecimalFormat df = new DecimalFormat("##.##");
                                         String RoundedTotalMiles = String.valueOf(df.format(TotalRunMiles));
 
+
                                         stravaTotalRunMiles.setText("All-time Run distance: "+RoundedTotalMiles+"Miles");
 
                                         //Get all-time total ride miles
