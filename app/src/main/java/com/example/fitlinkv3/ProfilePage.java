@@ -82,8 +82,8 @@ public class ProfilePage extends AppCompatActivity {
                         //set profile picture
                         Picasso.get()
                                 .load(stravaresponse.getProfile())
+                                //placeholder for while image loads
                                 .placeholder(R.drawable.fitlink_logo)
-                                //.error(R.drawable.bday_icon)
                                 .into(stravaImage);
 
                         stravaId = stravaresponse.getId();
