@@ -10,39 +10,49 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+// this is for the information inside the table inside the database
 @Entity(tableName = "addData")
 public class AddingShat  {
-    @PrimaryKey
+    @PrimaryKey (autoGenerate = true) // should i primary key the main colums? or should i auto genereate it?
     private int id;
 
-    @ColumnInfo(name = " user_name") // specifying the name of the collum
-    private String name;
+    @ColumnInfo(name = "kal") // specifying the name of the collum
+    private String kal ;
 
-    @ColumnInfo(name ="user_email") //^
-    private String email;
+    @ColumnInfo(name = "pro") //^
+    private String pro;
 
-    public int getId() {
-        return id;
-    }
+    public AddingShat (int id, String kal , String pro) {
 
-    public void setId(int id) {
         this.id = id;
+        this.kal = kal;
+        this.pro = pro;
+
     }
 
-    public String getName () {
-        return name;
-    }
 
-    public void setName (String name){
-        this.name =name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail (){
-        this.email = email;
-    }
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+//
+//    public int getName () {
+//        return name;
+//    }
+//
+//    public int setName (String name){
+//        this.name =name;
+//    }
+//
+//    public String getEmail() {
+//        return email;
+//    }
+//    public void setEmail (){
+//        this.email = email;
+//    }
 
     //
 //  data information
