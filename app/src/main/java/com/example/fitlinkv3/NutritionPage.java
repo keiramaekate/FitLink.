@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageView;
@@ -20,13 +19,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitlinkv3.Database.AddingShat;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -51,7 +50,7 @@ public class NutritionPage extends AppCompatActivity {
         button = (Button) this.findViewById(R.id.button);
         button.setOnClickListener(v -> {
 
-            Intent i = new Intent(NutritionPage.this,AddingShat.class);
+            Intent i = new Intent(NutritionPage.this, AddingShat.class);
             NutritionPage.this.startActivity(i);
 
         });

@@ -1,4 +1,4 @@
-package com.example.fitlinkv3;
+package com.example.fitlinkv3.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
