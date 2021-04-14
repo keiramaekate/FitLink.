@@ -42,39 +42,27 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="HardcodedText,MissingConstraints" />
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
-        android:text="Motivational Quote"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/articleOne"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
     <LinearLayout
-        android:id="@+id/articleOne"
+        android:id="@+id/articleTwo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="16dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/textview_border"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/articleOne"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:src="@color/Primary_colour"
+            android:scaleType="fitCenter"
+            android:src="@drawable/healthlogo"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
@@ -88,7 +76,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Article 1"
+                android:text="Health"
                 android:textColor="@color/text_icons"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -97,11 +85,76 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Article description"
+                android:text="Popular fitness and diet related articles from Health.com"
                 android:textColor="@color/text_icons"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Motivational Quote"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articleTwo"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/articleOne"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/textview_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/fitbitlogo"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fitbit Blog"
+                android:textColor="@color/text_icons"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read all the latest diet, fitness and mindfullness articles from fitbit"
+                android:textColor="@color/text_icons"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/explore_challenges"
@@ -164,7 +217,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="40dp"
         android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/running_challenge"
         app:layout_constraintVertical_bias="0.147"
@@ -181,7 +234,7 @@
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toEndOf="@id/headspaceBtn"
         app:layout_constraintTop_toBottomOf="@+id/running_challenge"
-        app:layout_constraintVertical_bias="0.147"
+        app:layout_constraintVertical_bias="0.105"
         app:srcCompat="@drawable/runtogether"
         tools:ignore="ContentDescription" />
 
