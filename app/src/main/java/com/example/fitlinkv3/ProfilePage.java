@@ -165,6 +165,7 @@ public class ProfilePage extends AppCompatActivity {
                                         pie.legend().title().enabled(false);
 
 
+
                                         //set piechart
                                         totalStatsChart.setChart(pie);
                                     }

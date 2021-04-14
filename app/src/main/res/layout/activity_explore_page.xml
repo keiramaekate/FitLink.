@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginLeft="16dp"
+        android:textColor="@color/Primary_text_colour"
         android:text="Fitness Articles"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -79,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:text="Health"
                 android:textColor="@color/text_icons"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -88,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:text="Popular fitness and diet related articles from Health.com"
                 android:textColor="@color/text_icons"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -129,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:text="The Independent"
                 android:textColor="@color/text_icons"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -138,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:text="Great regularly updated workout reccomendations from The Independent"
                 android:textColor="@color/text_icons"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -148,6 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="4dp"
+        android:textColor="@color/Primary_text_colour"
         android:text="Motivational Quote"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -193,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:text="Fitbit Blog"
                 android:textColor="@color/text_icons"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -202,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:text="Read all the latest diet, fitness and mindfullness articles from fitbit"
                 android:textColor="@color/text_icons"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -214,6 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
+        android:textColor="@color/Primary_text_colour"
         android:text="Explore new challenges..."
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20sp"
@@ -293,6 +296,7 @@
         android:id="@+id/tvQuotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/Primary_text_colour"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="2dp"
