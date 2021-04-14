@@ -74,7 +74,7 @@
                         android:layout_marginTop="6dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/runningchallenges"
+                        app:srcCompat="@drawable/running_challenge"
                         tools:ignore="ContentDescription" />
 
                     <ImageButton
@@ -87,7 +87,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/swimming_challenge"
                         app:layout_constraintStart_toEndOf="@id/running_challenge"
-                        app:srcCompat="@drawable/cyclingchallenges"
+                        app:srcCompat="@drawable/cycling_chellenges"
                         tools:ignore="ContentDescription" />
 
                     <ImageButton
@@ -99,7 +99,7 @@
                         android:layout_marginTop="6dp"
                         app:layout_constraintStart_toEndOf="@id/cycling_challenge"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/swimmingchallenges"
+                        app:srcCompat="@drawable/swimming_challenge"
                         tools:ignore="ContentDescription" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
