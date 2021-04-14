@@ -101,11 +101,10 @@ public class AchievementsFragment extends Fragment {
                                         } else if (TotalActivityCount >= 6) {
                                             //set image to pro
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_pro));
-                                            //assign the '/10' to whatever the above statement is
                                             TotalActivityProgress.setText(TotalActivityCount+"/10 to reach the next medal!");
                                         }
                                         //set image to novice
-                                        else if (TotalActivityCount < 5) {
+                                        else if (TotalActivityCount <= 5) {
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_novice));
                                             TotalActivityProgress.setText(TotalActivityCount+"/4 to reach the next medal!");
                                         }
@@ -145,7 +144,7 @@ public class AchievementsFragment extends Fragment {
                                                 if (RoundedRideDistance >= 15){
                                                     //set image to gold
                                                     TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_distance));
-                                                    RideDistanceProgress.setText("You have achieved gold with: "+RoundedRunDistance+" miles of cycling! Be proud!");
+                                                    RideDistanceProgress.setText("You have achieved gold with: "+RoundedRideDistance+" miles of cycling! Be proud!");
 
                                                 }
                                                 else if(RoundedRideDistance >=10) {
