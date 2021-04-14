@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,11 @@ public class ExplorePage extends AppCompatActivity {
     TextView MotivationalQuotes;
     // List of  quotes
     ArrayList<String> listOfQuotes;
+
+    //Articles
+    LinearLayout website1;
+    LinearLayout website2;
+    LinearLayout website3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,9 +84,44 @@ public class ExplorePage extends AppCompatActivity {
             }
         });
 
+        //Open fitbit website
+        website1 = findViewById(R.id.articleOne);
+        website1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fitbit = "https://blog.fitbit.com/";
+                Uri website = Uri.parse(fitbit);
+                Intent openfitbitwebsite = new Intent(Intent.ACTION_VIEW, website);
+                startActivity(openfitbitwebsite);
+            }
+        });
+
+        //open health.com
+        website2 = findViewById(R.id.articleTwo);
+        website2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String health = "https://www.health.com/fitness";
+                Uri website = Uri.parse(health);
+                Intent openhealthwebsite = new Intent(Intent.ACTION_VIEW, website);
+                startActivity(openhealthwebsite);
+            }
+        });
+
+        //open the independent
+        website3 = findViewById(R.id.articleThree);
+        website3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String independent = "https://www.independent.co.uk/topic/fitness?CMP=ILC-refresh";
+                Uri website = Uri.parse(independent);
+                Intent opentheindependentwebsite = new Intent(Intent.ACTION_VIEW, website);
+                startActivity(opentheindependentwebsite);
+            }
+        });
 
         // open headspace website
-        ImageButton headspaceBtn = (ImageButton) findViewById(R.id.headspaceBtn);
+        ImageButton headspaceBtn = findViewById(R.id.headspaceBtn);
         headspaceBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

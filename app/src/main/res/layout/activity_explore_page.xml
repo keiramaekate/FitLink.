@@ -53,7 +53,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/articleOne"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:clickable="true">
 
         <ImageView
             android:layout_width="50dp"
@@ -102,7 +103,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/articleTwo"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:clickable="true">
 
         <ImageView
             android:layout_width="50dp"
@@ -165,7 +167,8 @@
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:clickable="true">
 
         <ImageView
             android:layout_width="50dp"
