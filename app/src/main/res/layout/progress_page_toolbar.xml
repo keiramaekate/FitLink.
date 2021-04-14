@@ -3,7 +3,7 @@
     android:id="@+id/toolbar2"
     android:layout_width="match_parent"
     android:layout_height="55dp"
-    android:background="@color/Primary_colour"
+    android:background="@drawable/toolbar"
     android:minHeight="?attr/actionBarSize"
     android:padding="10dp"
     android:theme="?attr/actionBarTheme">
@@ -26,7 +26,8 @@
         android:foregroundGravity="center"
         android:text="Progress"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
         android:textColor="@color/text_icons"
         android:textSize="25dp"
         tools:ignore="RtlCompat" />

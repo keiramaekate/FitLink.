@@ -15,7 +15,7 @@
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemBackground="@color/Primary_colour"
+        app:itemBackground="@drawable/bottom_nav"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,76 +36,30 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginLeft="16dp"
-        android:textColor="@color/Primary_text_colour"
+        android:layout_marginTop="204dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="Fitness Articles"
+        android:textColor="@color/Primary_text_colour"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="HardcodedText,MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/articleTwo"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/textview_border"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/articleOne"
-        tools:ignore="MissingConstraints"
-        android:clickable="true">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/healthlogo"
-            tools:ignore="ContentDescription" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:paddingStart="5dp"
-            android:paddingLeft="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Health"
-                android:textColor="@color/text_icons"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Popular fitness and diet related articles from Health.com"
-                android:textColor="@color/text_icons"
-                android:textSize="11sp" />
-        </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/articleThree"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/textview_border"
+        android:clickable="true"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/articleTwo"
-        tools:ignore="MissingConstraints"
-        android:clickable="true">
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="50dp"
@@ -128,6 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
                 android:text="The Independent"
                 android:textColor="@color/text_icons"
                 android:textSize="13sp"
@@ -137,48 +92,35 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
                 android:text="Great regularly updated workout reccomendations from The Independent"
                 android:textColor="@color/text_icons"
                 android:textSize="11sp" />
         </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
-        android:textColor="@color/Primary_text_colour"
-        android:text="Motivational Quote"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/articleThree"
-        tools:ignore="HardcodedText,MissingConstraints" />
-
     <LinearLayout
         android:id="@+id/articleOne"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="2dp"
         android:background="@drawable/textview_border"
+        android:clickable="true"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        android:clickable="true">
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:scaleType="fitCenter"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/fitbitlogo"
             tools:ignore="ContentDescription" />
 
@@ -193,6 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
                 android:text="Fitbit Blog"
                 android:textColor="@color/text_icons"
                 android:textSize="13sp"
@@ -202,24 +145,95 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
                 android:text="Read all the latest diet, fitness and mindfullness articles from fitbit"
                 android:textColor="@color/text_icons"
                 android:textSize="11sp" />
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/articleTwo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/textview_border"
+        android:clickable="true"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articleOne"
+        tools:ignore="MissingConstraints">
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/healthlogo"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Health"
+                android:textColor="@color/text_icons"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Popular fitness and diet related articles from Health.com"
+                android:textColor="@color/text_icons"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/cycling_challenge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toStartOf="@+id/swimming_challenge"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@id/running_challenge"
+        app:layout_constraintTop_toBottomOf="@+id/explore_challenges"
+        app:layout_constraintVertical_bias="0.019"
+        app:srcCompat="@drawable/cycling_chellenges"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/explore_challenges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/Primary_text_colour"
+        android:layout_marginTop="56dp"
         android:text="Explore new challenges..."
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/Primary_text_colour"
+        android:fontFamily="sans-serif-condensed-light"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -230,16 +244,17 @@
         android:id="@+id/running_challenge"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:scaleType="fitXY"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:background="@null"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_challenges"
         app:srcCompat="@drawable/running_challenge"
         tools:ignore="ContentDescription" />
 
     <ImageButton
+<<<<<<< Updated upstream
         android:id="@+id/cycling_challenge"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -269,49 +284,81 @@
         tools:ignore="ContentDescription" />
 
     <ImageButton
+=======
+>>>>>>> Stashed changes
         android:id="@+id/headspaceBtn"
         android:layout_width="180dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="5dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cycling_challenge"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.379"
         app:srcCompat="@drawable/headspace"
         tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/runtogether"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="112dp"
         android:layout_marginTop="5dp"
         android:background="@null"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toEndOf="@id/headspaceBtn"
         app:layout_constraintTop_toBottomOf="@+id/cycling_challenge"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.217"
         app:srcCompat="@drawable/runtogether"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/swimming_challenge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_challenges"
+        app:srcCompat="@drawable/swimming_challenge"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvQuotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/Primary_text_colour"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@color/Primary_text_colour"
+        android:textStyle="italic"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         tools:text="Quote" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Motivational Quote"
+        android:textColor="@color/Primary_text_colour"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articleThree"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
