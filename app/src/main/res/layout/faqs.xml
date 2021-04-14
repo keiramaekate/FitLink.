@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".FAQs"
-        android:background="@drawable/background" >
+        android:background="@drawable/background"
+    android:padding="5dp">
 
 
     <TextView
@@ -75,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="Strava is a piece of shit"
+        android:text="Strava is a fitness tracking app which allows users to record activities such as running, walking and canooing. "
         android:textColor="@color/text_icons"
         android:textSize="15dp"
         android:textStyle="italic"
@@ -88,7 +89,7 @@
         android:id="@+id/AchievementsInfo"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="What are achievements?"
         android:textColor="@color/text_icons"
