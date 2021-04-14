@@ -8,8 +8,7 @@
     android:layout_marginTop="55dp"
     android:layout_marginBottom="55dp"
     tools:context=".AchievementsFragment"
-    android:background="@drawable/background">
-
+android:background="@drawable/background">
     <ImageButton
         android:id="@+id/TotalActivity"
         android:layout_width="150dp"
