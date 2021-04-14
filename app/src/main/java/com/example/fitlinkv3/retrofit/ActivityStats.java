@@ -83,6 +83,15 @@ public class ActivityStats
 
     public Integer getAll_ride_totals_time(){return all_ride_totals.elapsed_time;}
 
+    //returns for recent elapsed time
+
+    public Integer getRecent_run_totals_time(){return recent_run_totals.elapsed_time;}
+
+    public Integer getRecent_ride_totals_time(){return all_ride_totals.elapsed_time;}
+
+    public Integer getRecent_swim_totals_time(){return all_swim_totals.elapsed_time;}
+
+
     //RideTotals class
     public class RideTotals
     {
