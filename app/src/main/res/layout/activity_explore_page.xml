@@ -105,126 +105,76 @@
             app:layout_constraintHorizontal_bias="0.175"
             tools:ignore="HardcodedText,NotSibling" />
 
-        <HorizontalScrollView
-            android:id="@+id/horizontal1"
-            android:layout_width="442dp"
-            android:layout_height="231dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/Try_Something_New"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/explore_challenges">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:paddingLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
                 <ImageButton
                     android:id="@+id/running_challenge"
-                    android:layout_width="168dp"
-                    android:layout_height="220dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="272dp"
+                    android:background="@null"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/runningchallenges"
+                    app:srcCompat="@drawable/running_challenge"
                     tools:ignore="ContentDescription" />
 
                 <ImageButton
                     android:id="@+id/cycling_challenge"
-                    android:layout_width="168dp"
-                    android:layout_height="220dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="352dp"
+                    android:background="@null"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/swimming_challenge"
                     app:layout_constraintStart_toEndOf="@id/running_challenge"
-                    app:srcCompat="@drawable/cyclingchallenges"
+                    app:srcCompat="@drawable/cycling_chellenges"
                     tools:ignore="ContentDescription" />
+
 
                 <ImageButton
                     android:id="@+id/swimming_challenge"
-                    android:layout_width="168dp"
-                    android:layout_height="220dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="6dp"
-                    app:layout_constraintStart_toEndOf="@id/cycling_challenge"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/swimmingchallenges"
-                    tools:ignore="ContentDescription" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </HorizontalScrollView>
-
-        <TextView
-            android:id="@+id/Try_Something_New"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="265dp"
-            android:layout_marginRight="265dp"
-            android:text="@string/try_something_new"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintHorizontal_bias="0.125"
-            app:layout_constraintStart_toStartOf="@+id/explore_challenges"
-            app:layout_constraintTop_toBottomOf="@+id/horizontal1" />
-
-        <HorizontalScrollView
-            android:id="@+id/horizontal2"
-            android:layout_width="441dp"
-            android:layout_height="166dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Try_Something_New"
-            app:layout_constraintVertical_bias="0.116">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-                <ImageButton
-                    android:id="@+id/headspaceBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="19dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="272dp"
                     android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cycling_challenge"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.454"
-                    app:srcCompat="@drawable/headspace2"
+                    app:srcCompat="@drawable/swimming_challenge"
                     tools:ignore="ContentDescription" />
 
-                <ImageButton
-                    android:id="@+id/runtogether"
-                    android:layout_width="139dp"
-                    android:layout_height="129dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="19dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@null"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/headspaceBtn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.454"
-                    app:srcCompat="@drawable/runtogether"
-                    tools:ignore="ContentDescription" />
+    <ImageButton
+        android:id="@+id/headspaceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877"
+        app:srcCompat="@drawable/headspace2"
+        tools:ignore="ContentDescription" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </HorizontalScrollView>
+    <ImageButton
+        android:id="@+id/runtogether"
+        android:layout_width="139dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="16dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/headspaceBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809"
+        app:srcCompat="@drawable/runtogether"
+        tools:ignore="ContentDescription" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
