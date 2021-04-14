@@ -146,12 +146,14 @@ public class NutritionPage extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Settings:
-                Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                //newSettings();
+                Toast.makeText(getApplicationContext(), "You selected settings", Toast.LENGTH_LONG).show();
+                Intent Settings = new Intent(this,Settings.class);
+                this.startActivity(Settings);
                 return true;
-            case R.id.chatbot_assistant:
-                Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                //new(chatbotAssistant();
+            case R.id.FAQs:
+                Toast.makeText(getApplicationContext(), "You selected FAQs", Toast.LENGTH_LONG).show();
+                Intent FAQs = new Intent(this,FAQs.class);
+                this.startActivity(FAQs);
                 return true;
             default:
         }

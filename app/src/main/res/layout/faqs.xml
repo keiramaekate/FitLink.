@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FAQs"
+        android:background="@drawable/background" >
+
+
+    <TextView
+        android:id="@+id/FAQtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Frequently Asked Questions"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/text_icons"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fitLinkQuestion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="What is Fitlink?"
+            android:textColor="@color/text_icons"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FAQtitle" />
+
+    <TextView
+        android:id="@+id/FitLinkAnswer"
+        android:layout_width="374dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="FitLink is a fitness tracking app which incorporates unavailable features from Strava. The was was developed by a group of university students for their final year project. FitLink provides multiple features for you in order to monitor and analyze your health."
+        android:textColor="@color/text_icons"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fitLinkQuestion" />
+
+    <TextView
+            android:id="@+id/StravaQuestion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="What is Strava?"
+            android:textColor="@color/text_icons"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FitLinkAnswer" />
+
+    <TextView
+        android:id="@+id/StravaAnswer"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Strava is a piece of shit"
+        android:textColor="@color/text_icons"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StravaQuestion" />
+
+    <TextView
+        android:id="@+id/AchievementsInfo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="What are achievements?"
+        android:textColor="@color/text_icons"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StravaAnswer" />
+
+    <TextView
+        android:id="@+id/AchievementAnswer"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="The achievements feature within the progress page has the ability to show you what types of trophies you have achieved based on your Strava data."
+        android:textColor="@color/text_icons"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AchievementsInfo" />
+
+    <TextView
+        android:id="@+id/RecordingQ"
+        android:layout_width="266dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Why can't I record on FitLink?"
+        android:textColor="@color/text_icons"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AchievementAnswer" />
+
+    <TextView
+        android:id="@+id/RecordingAnswer"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="FitLink explicitly doesn't offer users to record sessions because the main app, Strava, already offers that to users. FitLink is mostly used for analysing, interpreting and exploring new things in which Strava does not offer. If you wish to record, please use Strava on your device."
+        android:textColor="@color/text_icons"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RecordingQ" />
+
+    <TextView
+        android:id="@+id/DifferentQ"
+        android:layout_width="366dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="What does FitLink offer that's different to Strava?"
+        android:textColor="@color/text_icons"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RecordingAnswer" />
+
+    <TextView
+        android:id="@+id/DifferentAnswer"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="FitLink explicitly doesn't offer users to record sessions because the main app, Strava, already offers that to users. FitLink is mostly used for analysing, interpreting and exploring new things in which Strava does not offer. If you wish to record, please use Strava on your device."
+        android:textColor="@color/text_icons"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DifferentQ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

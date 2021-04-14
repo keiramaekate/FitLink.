@@ -13,11 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -32,6 +32,7 @@ public class ExplorePage extends AppCompatActivity {
     LinearLayout website1;
     LinearLayout website2;
     LinearLayout website3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -214,11 +215,15 @@ public class ExplorePage extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Settings:
-                Toast.makeText(getApplicationContext(), "You selected Search", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.chatbot_assistant:
-                Toast.makeText(getApplicationContext(), "You selected Settings", Toast.LENGTH_LONG).show();
-                break;
+                Toast.makeText(getApplicationContext(), "You selected settings", Toast.LENGTH_LONG).show();
+                Intent Settings = new Intent(this,Settings.class);
+                this.startActivity(Settings);
+                return true;
+            case R.id.FAQs:
+                Toast.makeText(getApplicationContext(), "You selected FAQs", Toast.LENGTH_LONG).show();
+                Intent FAQs = new Intent(this,FAQs.class);
+                this.startActivity(FAQs);
+                return true;
             default:
         }
         return ExplorePage.super.onOptionsItemSelected(item);
