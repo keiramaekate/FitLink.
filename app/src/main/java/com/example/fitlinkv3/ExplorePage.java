@@ -130,11 +130,8 @@ public class ExplorePage extends AppCompatActivity {
                 String headspace = "https://www.headspace.com/?utm_source=google&utm_medium=cpc&utm_campaign=917256451&utm_content=51529951612&utm_term=409650155250&headspace&gclid=CjwKCAiA7939BRBMEiwA-hX5JyY-K1CL6RtaABWXDO2j_w497xTCa7Wu2AX04VwbIVkLbnajrixClRoCjPoQAvD_BwE";
                 Uri website = Uri.parse(headspace);
 
-//                check if Headspace app is installed, otherwise open on internet
                 Intent openHeadpace = new Intent(Intent.ACTION_VIEW, website);
-                if (!(openHeadpace.resolveActivity(getPackageManager()) == null)) {
                     startActivity(openHeadpace);
-                }
             }
         });
 
@@ -148,9 +145,8 @@ public class ExplorePage extends AppCompatActivity {
                 Uri website = Uri.parse(runtogether);
 
                 Intent openRunTogether = new Intent(Intent.ACTION_VIEW, website);
-                if (!(openRunTogether.resolveActivity(getPackageManager()) == null)) {
                     startActivity(openRunTogether);
-                }
+
             }
         });
 
@@ -164,9 +160,8 @@ public class ExplorePage extends AppCompatActivity {
                 Uri website = Uri.parse(runchallenge);
 
                 Intent openrunchallenge = new Intent(Intent.ACTION_VIEW, website);
-                if (!(openrunchallenge.resolveActivity(getPackageManager()) == null)) {
                     startActivity(openrunchallenge);
-                }
+
             }
         });
 
@@ -179,9 +174,8 @@ public class ExplorePage extends AppCompatActivity {
                 Uri website = Uri.parse(cyclechallenges);
 
                 Intent opencyclechallenges = new Intent(Intent.ACTION_VIEW, website);
-                if (!(opencyclechallenges.resolveActivity(getPackageManager()) == null)) {
                     startActivity(opencyclechallenges);
-                }
+
             }
         });
 
@@ -194,9 +188,8 @@ public class ExplorePage extends AppCompatActivity {
                 Uri website = Uri.parse(swimchallenges);
 
                 Intent openswimchallenges = new Intent(Intent.ACTION_VIEW, website);
-                if (!(openswimchallenges.resolveActivity(getPackageManager()) == null)) {
                     startActivity(openswimchallenges);
-                }
+
             }
         });
     }
