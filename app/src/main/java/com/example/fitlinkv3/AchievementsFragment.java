@@ -125,12 +125,12 @@ public class AchievementsFragment extends Fragment {
                                             else if(RoundedRunDistance >=20){
                                                 //set image to silver
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_distance));
-                                                RunDistanceProgress.setText("You are "+(50-RoundedRunDistance)+" away from gold, keep going!");
+                                                RunDistanceProgress.setText("You are "+(50-RoundedRunDistance)+" miles away from gold, keep going!");
                                             }
                                             else if(RoundedRunDistance >=10){
                                                 //set image to bronze
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_distance));
-                                                RunDistanceProgress.setText("You are "+(20-RoundedRunDistance)+" away from gold, keep going!");
+                                                RunDistanceProgress.setText("You are "+(20-RoundedRunDistance)+" miles away from gold, keep going!");
 
                                             }
 
@@ -172,17 +172,17 @@ public class AchievementsFragment extends Fragment {
                                             if (RoundedRunTime >= 10) {
                                             //set image to gold
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run_time));
-                                                RunTimeProgress.setText("You have achieved gold with: "+RoundedRunTime+" minutes recorded for runs! Well done!");
+                                                RunTimeProgress.setText("You have achieved gold with: "+RoundedRunTime+" hours recorded for runs! Well done!");
                                             }
                                             else if (RoundedRunTime >= 6) {
                                             //set silver
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_time));
-                                                RunTimeProgress.setText("You are "+(10-RoundedRunTime)+" minutes from gold, Keep going!");
+                                                RunTimeProgress.setText("You are "+(10-RoundedRunTime)+" hours from gold, Keep going!");
                                             }
                                             //set bronze
                                             else if (RoundedRunTime == 1) {
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_time));
-                                                RunTimeProgress.setText("You are "+(6-RoundedRunTime)+" minutes away from silver ");
+                                                RunTimeProgress.setText("You are "+(6-RoundedRunTime)+" hours away from silver ");
                                             }
 
                                             //Get TOTAL RIDE TIME for achievement
@@ -197,19 +197,19 @@ public class AchievementsFragment extends Fragment {
                                             if (RoundedRideTime >= 10) {
                                             //set image to gold
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_time));
-                                                RideTimeProgress.setText("You have achieved gold with: "+RoundedRideTime+" minutes recorded for cycling! Well done!");
+                                                RideTimeProgress.setText("You have achieved gold with: "+RoundedRideTime+" hours recorded for cycling! Well done!");
 
                                             }
                                             else if (RoundedRideTime >= 6) {
                                             //set silver
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_ride_time));
-                                                RideTimeProgress.setText("You are "+(10-RoundedRideTime)+" minutes from gold, Keep going!");
+                                                RideTimeProgress.setText("You are "+(10-RoundedRideTime)+" hours from gold, Keep going!");
 
                                             }
                                             //set bronze
                                             else if (RoundedRideTime == 1) {
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_ride_time));
-                                                RideTimeProgress.setText("You are "+(6-RoundedRideTime)+" minutes away from silver ");
+                                                RideTimeProgress.setText("You are "+(6-RoundedRideTime)+" hours away from silver ");
                                             }
 
                                             //get TOTAL RUN ELEVATION

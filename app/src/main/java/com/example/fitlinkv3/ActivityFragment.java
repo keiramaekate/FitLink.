@@ -184,7 +184,7 @@ public class ActivityFragment extends Fragment {
                                         //p3 = minutes
                                         int q3 = p2 % 60;
                                         q2 = q2 / 60;
-                                        if(TotalRecentRideSeconds==0) {
+                                        if(TotalRecentRideSeconds== 0) {
                                             RecentRideTime.setText("Record a ride to see your statistics!");
                                         }
                                         else{RecentRideTime.setText("Recent Ride Time: " + q2 + "Hour(s) " + q3 + "Minute(s) " + q1 + "Second(s)");}
