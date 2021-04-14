@@ -30,7 +30,7 @@
         android:backgroundTint="@null"
         android:id="@+id/RecentStatsChart"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/RecentActivityText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
