@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
@@ -31,6 +32,7 @@ public class AchievementsFragment extends Fragment {
     //ID setup for athlete info
     public int stravaId;
 
+    //ImageViews for icon setting
     private ImageButton TotalActivity;
     private ImageButton TotalRunDistance;
     private ImageButton TotalRideDistance;
@@ -39,6 +41,8 @@ public class AchievementsFragment extends Fragment {
     private ImageButton TotalRunElevation;
     private ImageButton TotalRideElevation;
 
+    //TextViews for achievement progress
+    private TextView TotalActivityProgress;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -90,15 +94,19 @@ public class AchievementsFragment extends Fragment {
 
                                         //put if statement here\\
                                         if (TotalActivityCount >= 10) {
-                                            //set image to gold
+                                            //set image to athlete
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_athlete));
+                                            TotalActivityProgress.setText("You have reached athlete with: "+TotalActivityCount+" total activities!");
                                         } else if (TotalActivityCount >= 6) {
-                                            //set silver
+                                            //set image to pro
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_pro));
+                                            //assign the '/10' to whatever the above statement is
+                                            TotalActivityProgress.setText(TotalActivityCount+"/10 to reach the next medal!");
                                         }
-                                        //set bronze
+                                        //set image to novice
                                         else if (TotalActivityCount < 5) {
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_novice));
+                                            TotalActivityProgress.setText(TotalActivityCount+"/4 to reach the next medal!");
                                         }
 
                                             //Get RUN distance for achievement
@@ -263,16 +271,16 @@ public class AchievementsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_achievements, container, false);
 
+        //Assigning ImageViews
         TotalActivity = view.findViewById(R.id.TotalActivity);
-
         TotalRunDistance = view.findViewById(R.id.TotalRunDistance);
         TotalRideDistance = view.findViewById(R.id.TotalRideDistance);
-
         TotalRunTime = view.findViewById(R.id.TotalRunTime);
         TotalRideTime = view.findViewById(R.id.TotalRideTime);
-
         TotalRunElevation = view.findViewById(R.id.TotalRunElevation);
         TotalRideElevation = view.findViewById(R.id.TotalRideElevation);
+        //Assigning TextViews for medal progress
+        TotalActivityProgress = view.findViewById(R.id.tvActivityTotal);
         return view;
     }
 }
