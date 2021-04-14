@@ -36,27 +36,41 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Articles/ short reads"
+        android:text="Fitness Articles"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="HardcodedText,MissingConstraints" />
 
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Motivational Quote"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articleOne"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
     <LinearLayout
         android:id="@+id/articleOne"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_margin="16dp"
         android:background="@drawable/textview_border"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -76,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:text="Article 1"
                 android:textColor="@color/text_icons"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -85,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Article description"
                 android:textColor="@color/text_icons"
-                android:textSize="18sp" />
+                android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -93,26 +107,23 @@
         android:id="@+id/explore_challenges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="265dp"
-        android:layout_marginRight="265dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
+        android:layout_marginTop="8dp"
         android:text="Explore new challenges..."
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintTop_toBottomOf="@+id/articleOne"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuotes"
         tools:ignore="HardcodedText,NotSibling" />
-
 
     <ImageButton
         android:id="@+id/running_challenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_challenges"
@@ -124,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
         app:layout_constraintEnd_toStartOf="@+id/swimming_challenge"
@@ -137,7 +148,7 @@
         android:id="@+id/swimming_challenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:background="@null"
@@ -151,12 +162,12 @@
         android:id="@+id/headspaceBtn"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="40dp"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/running_challenge"
-        app:layout_constraintVertical_bias="0.466"
+        app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@drawable/headspace2"
         tools:ignore="ContentDescription" />
 
@@ -165,14 +176,27 @@
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toEndOf="@id/headspaceBtn"
         app:layout_constraintTop_toBottomOf="@+id/running_challenge"
-        app:layout_constraintVertical_bias="0.465"
+        app:layout_constraintVertical_bias="0.147"
         app:srcCompat="@drawable/runtogether"
         tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvQuotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="Quote" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
