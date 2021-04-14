@@ -232,13 +232,13 @@ public class ExplorePage extends AppCompatActivity {
     public void fillQuotes(){
         //set quotes
         listOfQuotes = new ArrayList<String>();
-        listOfQuotes.add("'Your body can stand almost anything. It’s your mind that you have to convince.'");
-        listOfQuotes.add("'Success isn’t always about greatness. It’s about consistency. Consistent hard work gains success. Greatness will come.'");
-        listOfQuotes.add("'Definition of a really good workout: when you hate doing it, but you love finishing it.'");
-        listOfQuotes.add("'Success starts with self-discipline.'");
-        listOfQuotes.add("'Push yourself because no one else is going to do it for you.'");
-        listOfQuotes.add("'A one hour workout is 4% of your day. You got this.'");
-        listOfQuotes.add("'What seems impossible today will one day become your warm-up.'");
+        listOfQuotes.add("Your body can stand almost anything. It’s your mind that you have to convince.");
+        listOfQuotes.add("Success isn’t always about greatness. It’s about consistency. Consistent hard work gains success. Greatness will come.");
+        listOfQuotes.add("Definition of a really good workout: when you hate doing it, but you love finishing it.");
+        listOfQuotes.add("Success starts with self-discipline.");
+        listOfQuotes.add("Push yourself because no one else is going to do it for you.");
+        listOfQuotes.add("A one hour workout is 4% of your day. You got this.");
+        listOfQuotes.add("What seems impossible today will one day become your warm-up.");
         listOfQuotes.add("“We are what we repeatedly do. Excellence then is not an act but a habit.” - Aristotle");
         listOfQuotes.add("“The difference between the impossible and the possible lies in a person’s determination.” - Tommy Lasorda");
         listOfQuotes.add("“If you want something you’ve never had, you must be willing to do something you’ve never done.” - Thomas Jefferson");
