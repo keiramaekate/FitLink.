@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_marginTop="55dp"
     android:layout_marginBottom="55dp"
-    tools:context=".ActivityFragment">
+    tools:context=".ActivityFragment"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/RecentActivityText"

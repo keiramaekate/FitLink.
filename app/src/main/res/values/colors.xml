@@ -8,5 +8,6 @@
     <color name="Primary_text_colour">#FF000000</color>
     <color name="secondary_text">#757575</color>
     <color name="white">#FFFFFF</color>
+    <color name="achievements_background">#FFe0AB</color>
 
 </resources>
