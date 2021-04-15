@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="55dp"
-    android:layout_marginBottom="55dp"
     tools:context=".AchievementsFragment"
 android:background="@drawable/background">
+
     <ImageButton
         android:id="@+id/TotalActivity"
         android:layout_width="150dp"
-        android:layout_height="152dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -28,11 +28,13 @@ android:background="@drawable/background">
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="UnusedAttribute" />
 
+
     <TextView
         android:id="@+id/tvActivityTotal"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:gravity="center"
+        android:text="Record an activity to unlock trophy!"
         android:textColor="@color/text_icons"
         android:textSize="12sp"
         android:textStyle="italic"
@@ -40,10 +42,8 @@ android:background="@drawable/background">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257"
-        android:text="Record an activity to unlock trophy!"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/TotalActivity"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/TotalRideElevation"
@@ -76,10 +76,10 @@ android:background="@drawable/background">
         android:src="@drawable/default_run_distance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.301" />
 
     <ImageButton
         android:id="@+id/TotalRideDistance"
@@ -94,15 +94,15 @@ android:background="@drawable/background">
         android:src="@drawable/default_ride_distance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/tvRunDistance"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a run to unlock achievements"
@@ -113,13 +113,13 @@ android:background="@drawable/background">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.011"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRunDistance"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvRideDistance"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a Ride to unlock achievements"
@@ -128,10 +128,10 @@ android:background="@drawable/background">
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRideDistance"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/TotalRunTime"
@@ -167,12 +167,12 @@ android:background="@drawable/background">
         app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TotalRideDistance"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.236" />
 
     <TextView
         android:id="@+id/tvRideTime"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a ride to unlock achievements"
@@ -183,25 +183,25 @@ android:background="@drawable/background">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.977"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRideTime"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvRunTime"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a run to unlock achievements"
         android:textColor="@color/text_icons"
-        android:textSize="12sp"
+        android:textSize="11sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRunTime"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/TotalRunElevation"
@@ -224,36 +224,36 @@ android:background="@drawable/background">
     <TextView
         android:id="@+id/tvRunElevation"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a run to unlock achievements"
         android:textColor="@color/text_icons"
-        android:textSize="12sp"
+        android:textSize="11sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRunElevation"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvRideElevation"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="2dp"
         android:text="Record a Ride to unlock achievements"
         android:textColor="@color/text_icons"
-        android:textSize="12sp"
+        android:textSize="11sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintTop_toBottomOf="@+id/TotalRideElevation"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

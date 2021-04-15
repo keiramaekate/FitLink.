@@ -3,11 +3,11 @@
     android:id="@+id/toolbar2"
     android:layout_width="match_parent"
     android:layout_height="55dp"
-    android:background="@color/Primary_colour"
+    android:background="@drawable/toolbar"
     android:minHeight="?attr/actionBarSize"
     android:padding="10dp"
-    android:theme="?attr/actionBarTheme">
-
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+>
     <ImageView
         android:id="@+id/toolbar_icon"
         android:layout_width="wrap_content"
@@ -28,7 +28,9 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/text_icons"
         android:textSize="25sp"
-        tools:ignore="RtlCompat" />
+        tools:ignore="RtlCompat"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"/>
 
 
 </androidx.appcompat.widget.Toolbar>

@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemBackground="@color/Primary_colour"
+        app:itemBackground="@drawable/bottom_nav"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_nav"
@@ -79,37 +79,73 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginBottom="412dp"
             android:gravity="center"
             android:textColor="@color/Primary_text_colour"
             android:textSize="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvStravaTotalRunMiles"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+            app:layout_constraintVertical_bias="0.857"
             tools:text="Recent Run Miles" />
 
         <TextView
-            android:id="@+id/tvStravaRecentRideMiles"
+            android:id="@+id/tvStravaTotalSwimMiles"
             android:layout_width="150dp"
             android:layout_height="40dp"
-
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="332dp"
             android:gravity="center"
             android:textColor="@color/Primary_text_colour"
             android:textSize="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintHorizontal_bias="0.122"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvStravaTotalRideMiles"
-            app:layout_constraintVertical_bias="0.0"
+            tools:text="Total Swim Miles" />
+
+        <TextView
+            android:id="@+id/tvStravaRecentSwimMiles"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="332dp"
+            android:gravity="center"
+            android:textColor="@color/Primary_text_colour"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Recent Swim Miles" />
+
+        <TextView
+            android:id="@+id/tvStravaRecentRideMiles"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="372dp"
+            android:gravity="center"
+            android:textColor="@color/Primary_text_colour"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.842"
+            app:layout_constraintStart_toStartOf="parent"
             tools:text="Recent Ride Miles" />
 
         <TextView
@@ -121,17 +157,15 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginBottom="372dp"
             android:gravity="center"
             android:textColor="@color/Primary_text_colour"
             android:textSize="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/tvStravaRecentRideMiles"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvUsername"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="Total Ride Miles" />
 
         <TextView
@@ -151,7 +185,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvStravaRecentRunMiles" />
+            app:layout_constraintTop_toBottomOf="@+id/tvStravaTotalSwimMiles" />
 
         <com.anychart.AnyChartView
             android:id="@+id/TotalStatsChart"
@@ -164,7 +198,7 @@
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/AlltimeActivityPieChart"
             app:layout_constraintVertical_bias="0.0">
@@ -180,16 +214,14 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:textColor="@color/Primary_text_colour"
             android:textSize="13dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tvStravaTotalRideMiles"
-            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUsername"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="Total Run Miles" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

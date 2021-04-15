@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         app:flow_horizontalAlign="end"
         app:flow_verticalGap="@dimen/navigation_drawer_width"
-        app:itemBackground="@color/Primary_colour"
+        app:itemBackground="@drawable/bottom_nav"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"

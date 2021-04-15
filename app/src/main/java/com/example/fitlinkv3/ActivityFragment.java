@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -21,6 +22,7 @@ import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -38,6 +40,11 @@ public class ActivityFragment extends Fragment {
 
     //ID setup for athlete info
     public int stravaId;
+
+    //TextViews for recent stats
+    TextView RecentRunTime;
+    TextView RecentRideTime;
+    TextView RecentSwimTime;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -87,6 +94,11 @@ public class ActivityFragment extends Fragment {
     {
         View view = inflater.inflate(R.layout.fragment_activity, container, false);
 
+        //set TextViews for RecentTimes
+        RecentRunTime = view.findViewById(R.id.tvRecentRunTime);
+        RecentRideTime = view.findViewById(R.id.tvRecentRideTime);
+        RecentSwimTime = view.findViewById(R.id.tvRecentSwimTime);
+
         //set pie chart in xml
         recentStatsChart = view.findViewById(R.id.RecentStatsChart);
         //Create instance of piechart
@@ -118,21 +130,10 @@ public class ActivityFragment extends Fragment {
                                     ActivityStats stravaresponse = response.body();
                                     if(stravaresponse !=null)
                                     {
-
-
-                                        //Get recent run count
-                                        int RecentRunCount = stravaresponse.getRecent_run_totals_count();
-
-                                        //Get recent ride count
-                                        int RecentRideCount = stravaresponse.getRecent_ride_totals_count();
-
-                                        //Get recent swim count
-                                        int RecentSwimCount = stravaresponse.getRecent_swim_totals_count();
-
                                         //sets up the pie chart with the data
-                                        int recentruns = stravaresponse.getAll_run_totals_count();
-                                        int recentrides = stravaresponse.getAll_ride_totals_count();
-                                        int recentswims = stravaresponse.getAll_swim_totals_count();
+                                        int recentruns = stravaresponse.getRecent_run_totals_count();
+                                        int recentrides = stravaresponse.getRecent_ride_totals_count();
+                                        int recentswims = stravaresponse.getRecent_swim_totals_count();
 
                                         //sets api the data as variables
                                         recentcountstats.add(new ValueDataEntry("Recent Runs",recentruns));
@@ -155,6 +156,55 @@ public class ActivityFragment extends Fragment {
 
                                         //set piechart
                                         recentStatsChart.setChart(pie);
+
+                                        //get recent run times
+                                        int TotalRecentRunSeconds = stravaresponse.getRecent_run_totals_time();
+
+                                        //convert seconds into hours, minutes and seconds
+                                        //p1=seconds
+                                        int p1 = TotalRecentRunSeconds % 60;
+                                        //p2=hours
+                                        int p2 = TotalRecentRunSeconds / 60;
+                                        //p3 = minutes
+                                        int p3 = p2 % 60;
+                                        p2 = p2 / 60;
+
+                                        if(TotalRecentRunSeconds==0) {
+                                            RecentRunTime.setText("Record a run to see your statistics!");
+                                        }
+                                        else{RecentRunTime.setText("Recent Run Time: " + p2 + "Hour(s) " + p3 + "Minute(s) " + p1 + "Second(s)");}
+                                        //get recent ride times
+                                        int TotalRecentRideSeconds = stravaresponse.getRecent_ride_totals_time();
+
+                                        //convert seconds into hours, minutes and seconds
+                                        //p1=seconds
+                                        int q1 = TotalRecentRideSeconds % 60;
+                                        //p2=hours
+                                        int q2 = TotalRecentRideSeconds / 60;
+                                        //p3 = minutes
+                                        int q3 = p2 % 60;
+                                        q2 = q2 / 60;
+                                        if(TotalRecentRideSeconds== 0) {
+                                            RecentRideTime.setText("Record a ride to see your statistics!");
+                                        }
+                                        else{RecentRideTime.setText("Recent Ride Time: " + q2 + "Hour(s) " + q3 + "Minute(s) " + q1 + "Second(s)");}
+
+                                        //get recent ride times
+                                        int TotalRecentSwimSeconds = stravaresponse.getRecent_swim_totals_time();
+
+                                        //convert seconds into hours, minutes and seconds
+                                        //p1=seconds
+                                        int x1 = TotalRecentSwimSeconds % 60;
+                                        //p2=hours
+                                        int x2 = TotalRecentSwimSeconds / 60;
+                                        //p3 = minutes
+                                        int x3 = x2 % 60;
+                                        x2 = x2 / 60;
+                                        if(TotalRecentSwimSeconds==0) {
+                                            RecentSwimTime.setText("Record a swim to see your statistics!");
+                                        }
+                                        else { RecentSwimTime.setText("Recent Swim Time: " + x2 + "Hour(s) " + x3 + "Minute(s) " + x1 + "Second(s)"); }
+
                                     }
                                 }
                             }

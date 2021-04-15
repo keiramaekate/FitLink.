@@ -24,8 +24,8 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity
-            android:name=".AddingShat"
+<!--        <activity-->
+<!--            android:name=".Database.AddingShat" Dont know why -->
             android:label="Nutrition Data" />
         <activity android:name=".ProfilePage" />
         <activity

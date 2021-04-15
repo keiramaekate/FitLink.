@@ -27,19 +27,62 @@
         app:layout_constraintVertical_bias="0.025" />
 
     <com.anychart.AnyChartView
-        android:backgroundTint="@null"
         android:id="@+id/RecentStatsChart"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/RecentActivityText"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RecentActivityText"
         app:layout_constraintVertical_bias="0.0"></com.anychart.AnyChartView>
+
+
+    <TextView
+        android:id="@+id/tvRecentRideTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="188dp"
+        android:text="Recent Ride Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecentRunTime"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/Primary_text_colour"/>
+
+    <TextView
+        android:id="@+id/tvRecentRunTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Run Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/RecentActivityText"
+        app:layout_constraintVertical_bias="0.606"
+        android:textColor="@color/Primary_text_colour"/>
+
+    <TextView
+        android:id="@+id/tvRecentSwimTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Recent Swim Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecentRideTime"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/Primary_text_colour"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

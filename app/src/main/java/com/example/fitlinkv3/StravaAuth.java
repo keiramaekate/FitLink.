@@ -1,9 +1,7 @@
 package com.example.fitlinkv3;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.samsandberg.stravaauthenticator.StravaAuthenticateActivity;
-import com.samsandberg.stravaauthenticator.StravaScopes;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -58,7 +59,6 @@ public class AchievementsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -101,11 +101,10 @@ public class AchievementsFragment extends Fragment {
                                         } else if (TotalActivityCount >= 6) {
                                             //set image to pro
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_pro));
-                                            //assign the '/10' to whatever the above statement is
                                             TotalActivityProgress.setText(TotalActivityCount+"/10 to reach the next medal!");
                                         }
                                         //set image to novice
-                                        else if (TotalActivityCount < 5) {
+                                        else if (TotalActivityCount <= 5) {
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_novice));
                                             TotalActivityProgress.setText(TotalActivityCount+"/4 to reach the next medal!");
                                         }
@@ -126,12 +125,12 @@ public class AchievementsFragment extends Fragment {
                                             else if(RoundedRunDistance >=20){
                                                 //set image to silver
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_distance));
-                                                RunDistanceProgress.setText("You are "+(50-RoundedRunDistance)+" away from gold, keep going!");
+                                                RunDistanceProgress.setText("You are "+(50-RoundedRunDistance)+" miles away from gold, keep going!");
                                             }
                                             else if(RoundedRunDistance >=10){
                                                 //set image to bronze
                                                 TotalRunDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_distance));
-                                                RunDistanceProgress.setText("You are "+(20-RoundedRunDistance)+" away from gold, keep going!");
+                                                RunDistanceProgress.setText("You are "+(20-RoundedRunDistance)+" miles away from gold, keep going!");
 
                                             }
 
@@ -145,7 +144,7 @@ public class AchievementsFragment extends Fragment {
                                                 if (RoundedRideDistance >= 15){
                                                     //set image to gold
                                                     TotalRideDistance.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_distance));
-                                                    RideDistanceProgress.setText("You have achieved gold with: "+RoundedRunDistance+" miles of cycling! Be proud!");
+                                                    RideDistanceProgress.setText("You have achieved gold with: "+RoundedRideDistance+" miles of cycling! Be proud!");
 
                                                 }
                                                 else if(RoundedRideDistance >=10) {
@@ -173,17 +172,17 @@ public class AchievementsFragment extends Fragment {
                                             if (RoundedRunTime >= 10) {
                                             //set image to gold
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_run_time));
-                                                RunTimeProgress.setText("You have achieved gold with: "+RoundedRunTime+" minutes recorded for runs! Well done!");
+                                                RunTimeProgress.setText("You have achieved gold with: "+RoundedRunTime+" hours recorded for runs! Well done!");
                                             }
                                             else if (RoundedRunTime >= 6) {
                                             //set silver
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_run_time));
-                                                RunTimeProgress.setText("You are "+(10-RoundedRunTime)+" minutes from gold, Keep going!");
+                                                RunTimeProgress.setText("You are "+(10-RoundedRunTime)+" hours from gold, Keep going!");
                                             }
                                             //set bronze
                                             else if (RoundedRunTime == 1) {
                                             TotalRunTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_run_time));
-                                                RunTimeProgress.setText("You are "+(6-RoundedRunTime)+" minutes away from silver ");
+                                                RunTimeProgress.setText("You are "+(6-RoundedRunTime)+" hours away from silver ");
                                             }
 
                                             //Get TOTAL RIDE TIME for achievement
@@ -198,19 +197,19 @@ public class AchievementsFragment extends Fragment {
                                             if (RoundedRideTime >= 10) {
                                             //set image to gold
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.gold_ride_time));
-                                                RideTimeProgress.setText("You have achieved gold with: "+RoundedRideTime+" minutes recorded for cycling! Well done!");
+                                                RideTimeProgress.setText("You have achieved gold with: "+RoundedRideTime+" hours recorded for cycling! Well done!");
 
                                             }
                                             else if (RoundedRideTime >= 6) {
                                             //set silver
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.silver_ride_time));
-                                                RideTimeProgress.setText("You are "+(10-RoundedRideTime)+" minutes from gold, Keep going!");
+                                                RideTimeProgress.setText("You are "+(10-RoundedRideTime)+" hours from gold, Keep going!");
 
                                             }
                                             //set bronze
                                             else if (RoundedRideTime == 1) {
                                             TotalRideTime.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.bronze_ride_time));
-                                                RideTimeProgress.setText("You are "+(6-RoundedRideTime)+" minutes away from silver ");
+                                                RideTimeProgress.setText("You are "+(6-RoundedRideTime)+" hours away from silver ");
                                             }
 
                                             //get TOTAL RUN ELEVATION
@@ -299,14 +298,57 @@ public class AchievementsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_achievements, container, false);
 
-        //Assigning ImageViews
+        //Assigning ImageViews and toasts
         TotalActivity = view.findViewById(R.id.TotalActivity);
+        TotalActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Number of Recorded Activities Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunDistance = view.findViewById(R.id.TotalRunDistance);
+        TotalRunDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Distance Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideDistance = view.findViewById(R.id.TotalRideDistance);
+        TotalRideDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Distance Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunTime = view.findViewById(R.id.TotalRunTime);
+        TotalRunTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Time Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideTime = view.findViewById(R.id.TotalRideTime);
+        TotalRideTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Time Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunElevation = view.findViewById(R.id.TotalRunElevation);
+        TotalRunElevation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Elevation Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideElevation = view.findViewById(R.id.TotalRideElevation);
+        TotalRideElevation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Elevation Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //Assigning TextViews for medal progress
         TotalActivityProgress = view.findViewById(R.id.tvActivityTotal);
         RunDistanceProgress = view.findViewById(R.id.tvRunDistance);
