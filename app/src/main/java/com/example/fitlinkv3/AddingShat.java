@@ -3,6 +3,7 @@ package com.example.fitlinkv3;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -34,13 +35,15 @@ public class AddingShat extends AppCompatActivity{
 
 
     private EditText fatint;
-
     private EditText proteinint;
     private EditText caloriesint;
 
     private TextView results;
-    AnyChartView totalStatsChart;
-    PieChart piechart;
+
+    //piechart
+    AnyChartView nutritionpiechart;
+
+
 
 
     @Override
@@ -52,13 +55,18 @@ public class AddingShat extends AppCompatActivity{
         proteinint = (EditText) findViewById(R.id.proteinint);
         caloriesint = (EditText) findViewById(R.id.caloriesint);
         results = (TextView) findViewById(R.id.results);
-        Pie pie = AnyChart.pie();
-        List<DataEntry> data = new ArrayList<>();
-//        setUpPieChart();
+        //setup piechart
+        nutritionpiechart = findViewById(R.id.intakechart);
+
     }
 
     public void insertbutton (View View) {
 
+        //Create instance of piechart
+        Pie pie = AnyChart.pie();
+
+        //Arraylist for the piechart
+        List<DataEntry> nutritioninfo = new ArrayList<>();
 
         int no1 = Integer.parseInt(proteinint.getText().toString());
         int no2 = Integer.parseInt(caloriesint.getText().toString());
@@ -66,57 +74,28 @@ public class AddingShat extends AppCompatActivity{
         int sum = no1 + no2 + no3;
         results.setText(String.valueOf(sum));
 
-//        piechart = (PieChart) findViewById(R.id.piechart);
-//        piechart.setUsePercentValues(true);
-//        piechart.getDescription().setEnabled(false);
-//        piechart.setExtraOffsets(5, 10, 5, 5);
-//
-//        piechart.setDragDecelerationFrictionCoef(0.95f);
-//
-//        piechart.setDrawHoleEnabled(true);
-//        piechart.setHoleColor(Color.WHITE);
-//        piechart.setTransparentCircleRadius(31f);
-//
-//        ArrayList<PieEntry> yValues = new ArrayList<>();
-//        yValues.add(new PieEntry(no1, "Protein"));
-//        yValues.add(new PieEntry(no2, "Calories"));
-//        yValues.add(new PieEntry(no3, "FAT"));
-//
-//        PieDataSet dataa = new PieDataSet(yValues, "Nutrition");
-//        dataa.setSliceSpace(3f);
-//        dataa.setSelectionShift(5f);
-//        dataa.setColors(ColorTemplate.COLORFUL_COLORS);
-//        PieData data = new PieData((dataa));
-//        data.setValueTextSize(10f);
-//        data.setValueTextColor(Color.YELLOW);
-//        piechart.setData(data);
+        //sets inputted data as piechart variables
+        nutritioninfo.add(new ValueDataEntry("Protein",no1));
+        nutritioninfo.add(new ValueDataEntry("Calories", no2));
+        nutritioninfo.add(new ValueDataEntry("Fat", no3));
+        //set piechart data
+        pie.data(nutritioninfo);
+
+        //customise pie chart
+        pie.labels().position("inside");
+        pie.legend().title().enabled(false);
+        pie.legend()
+                .position("inside")
+                .fontSize(8)
+                .iconSize(8)
+                .itemsLayout(LegendLayout.HORIZONTAL)
+                .align(Align.CENTER);
+        pie.legend().title().enabled(false);
+
+        //set piechart
+        nutritionpiechart.setChart(pie);
+
     }
-//public void setUpPieChart(){
-//
-//    Pie pie = AnyChart.pie();
-//    no1 = new
-//    //sets the data as variables
-//    data.add(new ValueDataEntry("Protein",no1));
-//    data.add(new ValueDataEntry("Calories",no2));
-//    data.add(new ValueDataEntry("Fat",no3));
-//
-//    //set piechart data
-//    pie.data(data);
-//
-//    //customise pie chart
-//    pie.labels().position("inside");
-//    pie.legend().title().enabled(false);
-//    pie.legend()
-//            .position("inside")
-//            .fontSize(8)
-//            .iconSize(8)
-//            .itemsLayout(LegendLayout.HORIZONTAL)
-//            .align(Align.CENTER);
-//    pie.legend().title().enabled(false);
-//
-//
-//    //set piechart
-//    totalStatsChart.setChart(pie);
 }
 
 
