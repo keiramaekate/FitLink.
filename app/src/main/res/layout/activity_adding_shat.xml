@@ -1,4 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_margin="4dp"-->
+<!--    tools:context=".Database.AddingShat">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="16dp">-->
+
+<!--       <TextView-->
+<!--           android:layout_width="0dp"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_weight="1"-->
+<!--           android:id ="@+id/textveiw"-->
+<!--           android:textSize="14dp"-->
+<!--           ></TextView>-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/editbutton"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:src="@drawable/ic_edit"></ImageView>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--        android:id="@+id/delete"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:src="@drawable/ic_delete"></ImageView>-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+<!--</androidx.cardview.widget.CardView>-->
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +52,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="false"
-    tools:context=".Database.AddingShat">
+    tools:context=".AddingShat">
 
     <include
         android:id="@+id/toolbar"
@@ -28,10 +74,10 @@
         android:text="Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.865"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.521" />
 
     <Button
         android:id="@+id/delete"
@@ -42,10 +88,10 @@
         android:text="All Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <EditText
         android:id="@+id/caloriesint"
@@ -106,13 +152,67 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Primary_colour"
+        android:onClick="insertbutton"
         android:text="insert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.857"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.31" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Intake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+<!--    <com.anychart.AnyChartView-->
+<!--        android:id="@+id/TotalsChart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.917"></com.anychart.AnyChartView>-->
+
+
+<!--    <com.github.mikephil.charting.charts.PieChart-->
+<!--        android:id="@+id/piechart"-->
+<!--        android:layout_width="395dp"-->
+<!--        android:layout_height="199dp"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.892"></com.github.mikephil.charting.charts.PieChart>-->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Intake of Nutritions"
+        android:textSize="20dp"
+        android:textColor="@color/Primary_colour"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

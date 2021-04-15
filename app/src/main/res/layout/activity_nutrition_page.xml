@@ -24,57 +24,84 @@
         app:menu="@menu/menu_nav"
         android:layout_alignParentBottom="true"/>
 
-    <CalendarView
-        android:id="@+id/cv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_weight="1"
-        android:focusedMonthDateColor="#FFFFFF"
-        android:gravity="center"
-        android:isScrollContainer="true"
-        android:keepScreenOn="true"
-        app:layout_constraintEnd_toEndOf="parent"
+<!--    <CalendarView-->
+<!--        android:id="@+id/cv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginLeft="24dp"-->
+<!--        android:layout_marginTop="296dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginRight="24dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:focusedMonthDateColor="#FFFFFF"-->
+<!--        android:gravity="center"-->
+<!--        android:isScrollContainer="true"-->
+<!--        android:keepScreenOn="true"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
 
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--      ></EditText>-->
+
+    <!--    <com.github.mikephil.charting.charts.PieChart-->
+<!--        android:id="@+id/Piechart"-->
+<!--        android:layout_width="395dp"-->
+<!--        android:layout_height="199dp"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:layout_marginTop="12dp"></com.github.mikephil.charting.charts.PieChart>-->
+
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <ImageButton
+        android:id="@+id/food"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="443dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        />
+
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/food1"
+        tools:ignore="ContentDescription" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottom_nav"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="360dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="368dp"
         android:text="Button" />
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/Piechart"
-        android:layout_width="395dp"
-        android:layout_height="199dp"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginTop="10dp"></com.github.mikephil.charting.charts.PieChart>
-
-
-    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/reccv"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        tools:layout_editor_absoluteX="104dp"-->
-<!--        tools:layout_editor_absoluteY="97dp" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="294dp"
+        android:layout_marginBottom="622dp"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="97dp" />
 
 
 </RelativeLayout>
-
-    <!--        android:layout_marginEnd="28dp"-->
-    <!--        android:layout_marginRight="28dp"-->
-    <!--        android:layout_marginBottom="384dp"-->
