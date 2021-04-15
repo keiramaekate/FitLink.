@@ -67,32 +67,18 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/Primary_colour"
-        android:text="Update"
-        android:textColor="@color/Primary_text_colour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
-
-    <Button
         android:id="@+id/delete"
-android:textColor="@color/Primary_text_colour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/Primary_colour"
         android:text="All Delete"
+        android:textColor="@color/Primary_text_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.374" />
 
     <EditText
         android:id="@+id/caloriesint"
@@ -110,7 +96,7 @@ android:textColor="@color/Primary_text_colour"
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314"
+        app:layout_constraintVertical_bias="0.267"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -148,34 +134,7 @@ android:textColor="@color/Primary_text_colour"
         app:layout_constraintTop_toBottomOf="@+id/proteinint"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/insertbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/Primary_colour"
-        android:onClick="insertbutton"
-        android:text="insert"
-        android:textColor="@color/Primary_text_colour"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31" />
-
-    <TextView
-        android:id="@+id/results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Intake"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
-
-<!--    <com.anychart.AnyChartView-->
+    <!--    <com.anychart.AnyChartView-->
 <!--        android:id="@+id/TotalsChart"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="200dp"-->
@@ -200,6 +159,49 @@ android:textColor="@color/Primary_text_colour"
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.892"></com.github.mikephil.charting.charts.PieChart>-->
+
+    <Button
+        android:id="@+id/insertbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Primary_colour"
+        android:onClick="insertbutton"
+        android:text="insert"
+        android:textColor="@color/Primary_text_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <com.anychart.AnyChartView
+        android:id="@+id/intakechart"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/RecentActivityText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fatint"></com.anychart.AnyChartView>
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Intake"
+        app:layout_constraintBottom_toTopOf="@+id/intakechart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fatint"
+        app:layout_constraintVertical_bias="0.287" />
 
     <TextView
         android:id="@+id/textView3"
