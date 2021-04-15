@@ -47,8 +47,11 @@ public class ProfilePage extends AppCompatActivity {
     //athlete stats
     TextView stravaTotalRunMiles;
     TextView stravaTotalRideMiles;
+    TextView stravaTotalSwimMiles;
     TextView stravaRecentRunMiles;
     TextView stravaRecentRideMiles;
+    TextView stravaRecentSwimMiles;
+
 
     //PieChart setup
     AnyChartView totalStatsChart;
@@ -140,6 +143,24 @@ public class ProfilePage extends AppCompatActivity {
                                         String RoundedRecentRideMiles = String.valueOf(df.format(RecentRideMiles));
                                         stravaRecentRideMiles.setText("Recent Ride Distance: "+RoundedRecentRideMiles+"Miles");
 
+                                        //Get total swim meters
+                                        Double TotalSwimMeters = stravaresponse.getAll_swim_totals_distance();
+                                        //Convert meters into miles
+                                        Double TotalSwimMiles = TotalSwimMeters*0.000621371;
+
+                                        //Turn to 2 decimal places
+                                        String RoundedTotalSwimMiles = String.valueOf(df.format(TotalSwimMiles));
+                                        stravaTotalSwimMiles.setText("Total Swim Distance: "+RoundedTotalSwimMiles+"Miles");
+
+                                        //Get recent swim meters
+                                        Double RecentSwimMeters = stravaresponse.getRecent_swim_totals_distance();
+                                        //Convert meters into miles
+                                        Double RecentSwimMiles = RecentSwimMeters*0.000621371;
+
+                                        //Turn to 2 decimal places
+                                        String RoundedRecentSwimMiles = String.valueOf(df.format(TotalSwimMiles));
+                                        stravaRecentSwimMiles.setText("Recent Swim Distance: "+RoundedRecentSwimMiles+"Miles");
+
                                         //sets up the pie chart with the data
                                         int totalruns = stravaresponse.getAll_run_totals_count();
                                         int totalrides = stravaresponse.getAll_ride_totals_count();
@@ -194,8 +215,10 @@ public class ProfilePage extends AppCompatActivity {
 
         stravaTotalRunMiles = findViewById(R.id.tvStravaTotalRunMiles);
         stravaTotalRideMiles = findViewById(R.id.tvStravaTotalRideMiles);
+        stravaTotalSwimMiles = findViewById(R.id.tvStravaTotalSwimMiles);
         stravaRecentRunMiles = findViewById(R.id.tvStravaRecentRunMiles);
         stravaRecentRideMiles = findViewById(R.id.tvStravaRecentRideMiles);
+        stravaRecentSwimMiles = findViewById(R.id.tvStravaRecentSwimMiles);
 
         totalStatsChart = findViewById(R.id.TotalStatsChart);
 
