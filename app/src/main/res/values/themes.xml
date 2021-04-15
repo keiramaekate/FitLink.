@@ -3,10 +3,8 @@
     <style name="Theme.FitLinkv3" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/Primary_colour</item>
-        <item name="colorPrimaryVariant">@color/Dark_primary_colour</item>
         <item name="colorOnPrimary">@color/Light_primary_colour</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/accent_colour</item>
         <item name="colorSecondaryVariant">@color/Light_primary_colour</item>
         <item name="colorOnSecondary">@color/text_icons</item>
         <!-- Status bar color. -->

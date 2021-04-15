@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Dark_primary_colour">#F57C00</color>
     <color name="Light_primary_colour">#FFE0B2</color>
     <color name="Primary_colour">#FF9800</color>
     <color name="text_icons">#212121</color>
-    <color name="accent_colour">#607D8B</color>
     <color name="Primary_text_colour">#FF000000</color>
-    <color name="secondary_text">#757575</color>
+    <color name="secondary_text">#FD8607</color>
     <color name="white">#FFFFFF</color>
     <color name="achievements_background">#FFe0AB</color>
+    <color name="faq_text">#FD8607</color>
 
 </resources>

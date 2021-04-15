@@ -97,16 +97,16 @@ public class AchievementsFragment extends Fragment {
                                         if (TotalActivityCount >= 10) {
                                             //set image to athlete
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_athlete));
-                                            TotalActivityProgress.setText("You have reached athlete status with: "+TotalActivityCount+" total activities!");
+                                            TotalActivityProgress.setText("You have reached athlete status with: "+TotalActivityCount+" total activities! Well done!");
                                         } else if (TotalActivityCount >= 6) {
                                             //set image to pro
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_pro));
-                                            TotalActivityProgress.setText(TotalActivityCount+"/10 to reach the next medal!");
+                                            TotalActivityProgress.setText("You need "+(10-TotalActivityCount)+" activities left to record to reach the next medal!");
                                         }
                                         //set image to novice
                                         else if (TotalActivityCount <= 5) {
                                             TotalActivity.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.total_activity_novice));
-                                            TotalActivityProgress.setText(TotalActivityCount+"/4 to reach the next medal!");
+                                            TotalActivityProgress.setText("You need "+(6-TotalActivityCount)+" activities left to record to reach the next medal!");
                                         }
 
                                             //Get RUN distance for achievement

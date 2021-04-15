@@ -201,6 +201,8 @@ public class ProfilePage extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
 
         ImageView leftIcon = findViewById(R.id.toolbar_icon);
         TextView title = findViewById(R.id.toolbar_title);

@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:background="@color/Primary_colour"
         android:text="Update"
+        android:textColor="@color/Primary_text_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.43"
@@ -35,10 +36,10 @@
 
     <Button
         android:id="@+id/delete"
-
+android:textColor="@color/Primary_text_colour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/Dark_primary_colour"
+        android:background="@color/Primary_colour"
         android:text="All Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,6 +108,7 @@
         android:layout_height="wrap_content"
         android:background="@color/Primary_colour"
         android:text="insert"
+        android:textColor="@color/Primary_text_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
