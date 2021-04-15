@@ -59,21 +59,189 @@
 
 
     <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="17dp"-->
+<!--        android:layout_marginTop="88dp"-->
+<!--        android:layout_marginEnd="294dp"-->
+<!--        android:layout_marginBottom="622dp"-->
+<!--        tools:layout_editor_absoluteX="104dp"-->
+<!--        tools:layout_editor_absoluteY="97dp" />-->
+
     <ImageButton
         android:id="@+id/food"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="302dp"
-        android:layout_marginBottom="443dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="525dp"
         android:background="@null"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintVertical_bias="0.466"
-        app:srcCompat="@drawable/food1"
+        app:srcCompat="@drawable/food3"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/food4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="379dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="301dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/food5"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/food7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="494dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="186dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/food7"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/foodn"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="422dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/nutrition_intake"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/foodn4"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="413dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="314dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/nutrition_intake3"
+        tools:ignore="ContentDescription" />
+    <ImageButton
+        android:id="@+id/foodn5"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="413dp"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="314dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/nutrition_intake3"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/foodn6"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="538dp"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginBottom="189dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/nutrition_intake4"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/foodn2"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="540dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.466"
+        app:srcCompat="@drawable/nutrition_intake2"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/food2"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="277dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="423dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/mushroompasta"
         tools:ignore="ContentDescription" />
 
     <Button
@@ -81,42 +249,112 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottom_nav"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="63dp"
-        android:layout_marginRight="63dp"
-        android:layout_marginBottom="368dp"
+        android:layout_marginStart="335dp"
+        android:layout_marginTop="636dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="40dp"
         android:text="Button" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="100dp"
-        android:layout_height="20dp"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="239dp"
+        android:layout_height="57dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="294dp"
-        android:layout_marginBottom="622dp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="97dp" />
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="603dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="120dp"
+        android:text="Click Button to insert your intake"
+        android:textColor="@color/Primary_colour"
+        android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="570dp"
-        android:text="Nutrition Recipes"
-        android:textSize="20dp"/>
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="378dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="350dp"
+        android:text="This is a Mushroom and leek spaghetti meal plan"
+        android:textColor="@color/Primary_colour"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="497dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="231dp"
+        android:text="This is a Coconut and Spinach salmon curry meal plan"
+        android:textColor="@color/Primary_colour"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="281dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="447dp"
+        android:text="This is a Creamy spinach chicken meal plan"
+        android:textColor="@color/Primary_colour"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="324dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="568dp"
+        android:text="This is a Crispy leek fried rice meal plan"
+        android:textColor="@color/Primary_colour"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginBottom="655dp"
+        android:text="MEAL PLAN "
+        android:textColor="@color/Primary_colour"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>

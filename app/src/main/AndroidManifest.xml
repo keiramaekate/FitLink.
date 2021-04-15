@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fitlinkv3">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:allowBackup="true"
-        tools:replace="android:allowBackup"
-        android:theme="@style/Theme.FitLinkv3">
+        android:theme="@style/Theme.FitLinkv3"
+        tools:replace="android:allowBackup">
         <activity android:name=".StravaAuth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +28,10 @@
             android:name=".AddingShat"
             android:label="Nutrition Data" />
         <activity android:name=".ProfilePage" />
-        <activity
-            android:name=".NutritionPage" />
+        <activity android:name=".NutritionPage" />
         <activity android:name=".ProgressPage" />
         <activity android:name=".ExplorePage" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

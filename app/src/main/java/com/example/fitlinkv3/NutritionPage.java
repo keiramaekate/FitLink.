@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,7 @@ public class NutritionPage extends AppCompatActivity {
     FloatingActionButton buttonadd;
     Button button;
 
+    LinearLayout food2;
     @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -66,6 +68,21 @@ public class NutritionPage extends AppCompatActivity {
                 }
             }
         });
+
+        food2 = findViewById(R.id.articleTwo);
+        food2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String food2 = "https://realfood.tesco.com/meal-planner/view/seasonal-suppers-march.html";
+                Uri website = Uri.parse(food2);
+                Intent openfood = new Intent(Intent.ACTION_VIEW, website);
+                startActivity(openfood);
+            }
+        });
+
+
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
