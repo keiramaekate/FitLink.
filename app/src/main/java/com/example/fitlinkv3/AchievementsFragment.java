@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -57,7 +58,6 @@ public class AchievementsFragment extends Fragment {
     public AchievementsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -298,14 +298,57 @@ public class AchievementsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_achievements, container, false);
 
-        //Assigning ImageViews
+        //Assigning ImageViews and toasts
         TotalActivity = view.findViewById(R.id.TotalActivity);
+        TotalActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Number of Recorded Activities Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunDistance = view.findViewById(R.id.TotalRunDistance);
+        TotalRunDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Distance Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideDistance = view.findViewById(R.id.TotalRideDistance);
+        TotalRideDistance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Distance Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunTime = view.findViewById(R.id.TotalRunTime);
+        TotalRunTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Time Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideTime = view.findViewById(R.id.TotalRideTime);
+        TotalRideTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Time Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRunElevation = view.findViewById(R.id.TotalRunElevation);
+        TotalRunElevation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Run Elevation Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
         TotalRideElevation = view.findViewById(R.id.TotalRideElevation);
+        TotalRideElevation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Total Ride Elevation Medal", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         //Assigning TextViews for medal progress
         TotalActivityProgress = view.findViewById(R.id.tvActivityTotal);
         RunDistanceProgress = view.findViewById(R.id.tvRunDistance);

@@ -76,10 +76,10 @@ android:background="@drawable/background">
         android:src="@drawable/default_run_distance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.301" />
 
     <ImageButton
         android:id="@+id/TotalRideDistance"
@@ -94,10 +94,10 @@ android:background="@drawable/background">
         android:src="@drawable/default_ride_distance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/tvRunDistance"
@@ -167,7 +167,7 @@ android:background="@drawable/background">
         app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TotalRideDistance"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.236" />
 
     <TextView
         android:id="@+id/tvRideTime"
