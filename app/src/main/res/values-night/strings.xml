@@ -6,7 +6,7 @@
     <string name="get_help">Get Help</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
-    <string name="text">Light Mode</string>
+    <string name="text">Night Mode</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

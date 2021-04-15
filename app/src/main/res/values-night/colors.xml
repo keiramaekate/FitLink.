@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Light_primary_colour">@color/secondary_text</color>
+    <color name="Primary_colour">#000000</color>
+    <color name="text_icons">#FFFFFF</color>
+    <color name="Primary_text_colour">#FFFFFF</color>
+    <color name="secondary_text">#757575</color>
+    <color name="achievements_background">#373634</color>
+    <color name="white">#000000</color>
+    <color name="faq_text">#FD8607</color>
+
+</resources>
