@@ -70,7 +70,7 @@ public class NutritionPage extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         // set screen that is selected
-        bottomNavigationView.setSelectedItemId(R.id.Explore);
+        bottomNavigationView.setSelectedItemId(R.id.Nutrition);
 
         // code to listen to what item is selected
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
