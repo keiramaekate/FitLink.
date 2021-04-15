@@ -24,11 +24,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
         <TextView
             android:id="@+id/fitLinkQuestion"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed-light"
@@ -44,8 +45,8 @@
 
     <TextView
         android:id="@+id/FitLinkAnswer"
-        android:layout_width="374dp"
-        android:layout_height="94dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="FitLink is a fitness tracking app which incorporates unavailable features from Strava. The was was developed by a group of university students for their final year project. FitLink provides multiple features for you in order to monitor and analyze your health."
@@ -55,13 +56,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fitLinkQuestion" />
+        app:layout_constraintTop_toBottomOf="@+id/fitLinkQuestion"
+        android:padding="5dp"/>
 
     <TextView
             android:id="@+id/StravaQuestion"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="What is Strava?"
         android:textStyle="bold"
@@ -74,9 +76,9 @@
 
     <TextView
         android:id="@+id/StravaAnswer"
-        android:layout_width="374dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Strava is a fitness tracking app which allows users to record activities such as running, walking and canooing. "
         android:textColor="@color/text_icons"
@@ -85,13 +87,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/StravaQuestion" />
+        app:layout_constraintTop_toBottomOf="@+id/StravaQuestion"
+        android:padding="5dp"/>
 
     <TextView
         android:id="@+id/AchievementsInfo"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="13dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="What are achievements?"
         android:textColor="@color/Primary_colour"
@@ -104,9 +107,9 @@
 
     <TextView
         android:id="@+id/AchievementAnswer"
-        android:layout_width="374dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="The achievements feature within the progress page has the ability to show you what types of trophies you have achieved based on your Strava data."
         android:textColor="@color/text_icons"
@@ -115,13 +118,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AchievementsInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/AchievementsInfo"
+        android:padding="5dp"/>
 
     <TextView
         android:id="@+id/RecordingQ"
-        android:layout_width="266dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="Why can't I record on FitLink?"
         android:textColor="@color/Primary_colour"
@@ -134,9 +138,9 @@
 
     <TextView
         android:id="@+id/RecordingAnswer"
-        android:layout_width="374dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="FitLink explicitly doesn't offer users to record sessions because the main app, Strava, already offers that to users. FitLink is mostly used for analysing, interpreting and exploring new things in which Strava does not offer. If you wish to record, please use Strava on your device."
         android:textColor="@color/text_icons"
@@ -145,13 +149,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RecordingQ" />
+        app:layout_constraintTop_toBottomOf="@+id/RecordingQ"
+        android:padding="5dp"/>
 
     <TextView
         android:id="@+id/DifferentQ"
-        android:layout_width="366dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="What does FitLink offer that's different to Strava?"
         android:textColor="@color/Primary_colour"
@@ -160,13 +165,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RecordingAnswer" />
+        app:layout_constraintTop_toBottomOf="@+id/RecordingAnswer"
+        android:padding="5dp"/>
 
     <TextView
         android:id="@+id/DifferentAnswer"
-        android:layout_width="374dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="3dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="FitLink explicitly doesn't offer users to record sessions because the main app, Strava, already offers that to users. FitLink is mostly used for analysing, interpreting and exploring new things in which Strava does not offer. If you wish to record, please use Strava on your device."
         android:textColor="@color/text_icons"
@@ -175,7 +181,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DifferentQ" />
+        app:layout_constraintTop_toBottomOf="@+id/DifferentQ"
+        android:padding="5dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
