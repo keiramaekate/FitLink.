@@ -52,7 +52,7 @@ public class NutritionPage extends AppCompatActivity {
 
             });
 
-        ImageButton food = (ImageButton) findViewById(R.id.swimming_challenge);
+        ImageButton food = (ImageButton) findViewById(R.id.food);
         food.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -66,6 +66,7 @@ public class NutritionPage extends AppCompatActivity {
                 }
             }
         });
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         // set screen that is selected

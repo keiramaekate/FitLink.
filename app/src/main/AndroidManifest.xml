@@ -22,10 +22,10 @@
         </activity>
         <activity android:name=".ChatBot" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Settings"
             android:label="@string/title_activity_settings" />
-<!--        <activity-->
-<!--            android:name=".Database.AddingShat" Dont know why -->
+        <activity
+            android:name=".AddingShat"
             android:label="Nutrition Data" />
         <activity android:name=".ProfilePage" />
         <activity
