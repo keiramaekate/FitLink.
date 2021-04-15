@@ -69,20 +69,16 @@ public class NutritionPage extends AppCompatActivity {
             }
         });
 
-        food2 = findViewById(R.id.articleTwo);
-        food2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String food2 = "https://realfood.tesco.com/meal-planner/view/seasonal-suppers-march.html";
-                Uri website = Uri.parse(food2);
-                Intent openfood = new Intent(Intent.ACTION_VIEW, website);
-                startActivity(openfood);
-            }
-        });
-
-
-
-
+//        food2 = findViewById(R.id.articleTwo);
+//        food2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String food2 = "https://realfood.tesco.com/meal-planner/view/seasonal-suppers-march.html";
+//                Uri website = Uri.parse(food2);
+//                Intent openfood = new Intent(Intent.ACTION_VIEW, website);
+//                startActivity(openfood);
+//            }
+//        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
