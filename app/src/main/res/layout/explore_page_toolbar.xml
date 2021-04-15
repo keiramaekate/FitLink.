@@ -6,7 +6,7 @@
     android:background="@drawable/toolbar"
     android:minHeight="?attr/actionBarSize"
     android:padding="10dp"
-    android:theme="?attr/actionBarTheme"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
 >
     <ImageView
         android:id="@+id/toolbar_icon"

@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemBackground="@color/Primary_colour"
+        app:itemBackground="@drawable/bottom_nav"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_nav"
