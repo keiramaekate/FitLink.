@@ -54,20 +54,20 @@ public class NutritionPage extends AppCompatActivity {
 
             });
 
-        ImageButton food = (ImageButton) findViewById(R.id.food);
-        food.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String food = "https://www.strava.com/challenges/1704?hl=en-GB";
-                Uri website = Uri.parse(food);
-
-                Intent openfood = new Intent(Intent.ACTION_VIEW, website);
-                if (!(openfood.resolveActivity(getPackageManager()) == null)) {
-                    startActivity(openfood);
-                }
-            }
-        });
+//        //ImageButton food = (ImageButton) findViewById(R.id.food);
+//        //food.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                String food = "https://www.strava.com/challenges/1704?hl=en-GB";
+//                Uri website = Uri.parse(food);
+//
+//                Intent openfood = new Intent(Intent.ACTION_VIEW, website);
+//                if (!(openfood.resolveActivity(getPackageManager()) == null)) {
+//                    startActivity(openfood);
+//                }
+//            }
+//        });
 
 //        food2 = findViewById(R.id.articleTwo);
 //        food2.setOnClickListener(new View.OnClickListener() {
