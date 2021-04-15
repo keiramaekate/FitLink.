@@ -66,30 +66,30 @@ public class AddingShat extends AppCompatActivity{
         int sum = no1 + no2 + no3;
         results.setText(String.valueOf(sum));
 
-        piechart = (PieChart) findViewById(R.id.piechart);
-        piechart.setUsePercentValues(true);
-        piechart.getDescription().setEnabled(false);
-        piechart.setExtraOffsets(5, 10, 5, 5);
-
-        piechart.setDragDecelerationFrictionCoef(0.95f);
-
-        piechart.setDrawHoleEnabled(true);
-        piechart.setHoleColor(Color.WHITE);
-        piechart.setTransparentCircleRadius(31f);
-
-        ArrayList<PieEntry> yValues = new ArrayList<>();
-        yValues.add(new PieEntry(no1, "Protein"));
-        yValues.add(new PieEntry(no2, "Calories"));
-        yValues.add(new PieEntry(no3, "FAT"));
-
-        PieDataSet dataa = new PieDataSet(yValues, "Nutrition");
-        dataa.setSliceSpace(3f);
-        dataa.setSelectionShift(5f);
-        dataa.setColors(ColorTemplate.COLORFUL_COLORS);
-        PieData data = new PieData((dataa));
-        data.setValueTextSize(10f);
-        data.setValueTextColor(Color.YELLOW);
-        piechart.setData(data);
+//        piechart = (PieChart) findViewById(R.id.piechart);
+//        piechart.setUsePercentValues(true);
+//        piechart.getDescription().setEnabled(false);
+//        piechart.setExtraOffsets(5, 10, 5, 5);
+//
+//        piechart.setDragDecelerationFrictionCoef(0.95f);
+//
+//        piechart.setDrawHoleEnabled(true);
+//        piechart.setHoleColor(Color.WHITE);
+//        piechart.setTransparentCircleRadius(31f);
+//
+//        ArrayList<PieEntry> yValues = new ArrayList<>();
+//        yValues.add(new PieEntry(no1, "Protein"));
+//        yValues.add(new PieEntry(no2, "Calories"));
+//        yValues.add(new PieEntry(no3, "FAT"));
+//
+//        PieDataSet dataa = new PieDataSet(yValues, "Nutrition");
+//        dataa.setSliceSpace(3f);
+//        dataa.setSelectionShift(5f);
+//        dataa.setColors(ColorTemplate.COLORFUL_COLORS);
+//        PieData data = new PieData((dataa));
+//        data.setValueTextSize(10f);
+//        data.setValueTextColor(Color.YELLOW);
+//        piechart.setData(data);
     }
 //public void setUpPieChart(){
 //

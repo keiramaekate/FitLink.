@@ -103,5 +103,20 @@
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="97dp" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="295dp"
+        android:layout_marginBottom="570dp"
+        android:text="Nutrition Recipes"
+        android:textSize="20dp"/>
+
 
 </RelativeLayout>
