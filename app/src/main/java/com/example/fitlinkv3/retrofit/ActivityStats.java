@@ -49,11 +49,15 @@ public class ActivityStats
 
     public Double getAll_ride_totals_distance(){return all_ride_totals.distance;}
 
+    public Double getAll_swim_totals_distance(){return all_swim_totals.distance;}
+
     //returns for recent distance
 
     public Double getRecent_run_totals_distance(){return recent_run_totals.distance;}
 
     public Double getRecent_ride_totals_distance(){return recent_ride_totals.distance;}
+
+    public Double getRecent_swim_totals_distance(){return all_ride_totals.distance;}
 
     //returns for all-time count
 
@@ -83,13 +87,15 @@ public class ActivityStats
 
     public Integer getAll_ride_totals_time(){return all_ride_totals.elapsed_time;}
 
+    public Integer getAll_swim_totals_time(){return all_swim_totals.elapsed_time;}
+
     //returns for recent elapsed time
 
     public Integer getRecent_run_totals_time(){return recent_run_totals.elapsed_time;}
 
-    public Integer getRecent_ride_totals_time(){return all_ride_totals.elapsed_time;}
+    public Integer getRecent_ride_totals_time(){return recent_ride_totals.elapsed_time;}
 
-    public Integer getRecent_swim_totals_time(){return all_swim_totals.elapsed_time;}
+    public Integer getRecent_swim_totals_time(){return recent_swim_totals.elapsed_time;}
 
 
     //RideTotals class
