@@ -29,7 +29,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:fontFamily="sans-serif-condensed-light"
         android:textStyle="bold"
-        android:textColor="@color/text_icons"
+        android:textColor="@color/Primary_text_colour"
         android:textSize="25dp"
         tools:ignore="RtlCompat" />
 

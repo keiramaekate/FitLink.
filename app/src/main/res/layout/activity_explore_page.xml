@@ -305,7 +305,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginRight="20dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:textColor="@color/Primary_text_colour"
+        android:textColor="@color/text_icons"
         android:textStyle="italic"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"

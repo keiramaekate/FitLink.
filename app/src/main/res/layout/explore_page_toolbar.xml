@@ -26,7 +26,7 @@
         android:foregroundGravity="center"
         android:text="@string/explore"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/text_icons"
+        android:textColor="@color/Primary_text_colour"
         android:textSize="25sp"
         tools:ignore="RtlCompat"
         android:fontFamily="sans-serif-condensed-light"
