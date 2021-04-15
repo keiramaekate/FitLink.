@@ -103,7 +103,7 @@ public class NutritionPage extends AppCompatActivity {
                 startActivity(openfood);
             }
         });
-        Recipe4 = findViewById(R.id.Recipe1);
+        Recipe4 = findViewById(R.id.Recipe4);
         Recipe4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
